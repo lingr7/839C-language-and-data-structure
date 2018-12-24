@@ -1,3 +1,4 @@
+/*calc.h*/
 #define NUMBER '0'
 
 void push(double);

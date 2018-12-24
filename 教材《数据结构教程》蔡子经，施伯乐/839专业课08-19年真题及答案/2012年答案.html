@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2012/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2012年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2012年答案_files/ansv3.css">
+  <script src="./2012年答案_files/cmt.js"></script>
+  <script src="./2012年答案_files/jquery.min.js"></script>
+  <script src="./2012年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2012年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2012年答案_files/font-awesome.css">
+
+  <title>2012年答案</title>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2012/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+<a href="http://www.malic.xyz/ans839/2012/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>    
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2012/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2012/#"><span>menu</span></a></li>
+  </ul>
+  
+
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+    <ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+<div id="contents">
+<a id="pc01"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 231, 207);">
+<p>
+    举例说明浮点数类型不能在内存中精确表示<br>
+比较程序设计的循环与递归的异同点
+</p>
+</div>
+<p>1.计算机内对数据存储都是二进制的形式，浮点数也不例外，而十进制小数转换为二进制小数往往不能在有限位上精确表示，所有用二进制只能近似地表示十进制小数，以0.6为例，它的二进制则是0.100110011001...，有限的位宽下不可能保存无限循环的数字，所以不能精确表示</p>
+<p>2.循环占用内存空间小，避免了调用函数和传参数的一系列开销，运算速度快。缺点：对于有些问题难以甚至不能找到循环结构来解决<br>递归优点：代码简洁，易理解，容易编程，并且循环总能转化为递归。缺点：需要频繁调用函数和传递参数，时间空间开销大。</p>
+
+</div>
+<a id="pc02"></a><br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(223, 207, 231);">
+<p>二、读程序写结果</p>
+</div>
+<pre>(-4, -2), [20, 104]       
+(-2, 3), [13, 73]         
+(4, 0), [16, 4]           
+(6, -2), [40, 4]          
+(9, 1), [82, 10]          
+[82, 10]
+[40, 4]
+[20, 104]
+[16, 4]
+[13, 73]
+30
+   </pre>      
+</div>
+<a id="pc03"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 199, 247);">
+<p>三、按要求写函数</p>
+</div>
+<p>(1)
+</p>
+<pre class="codes">typedef struct Node
+{
+	int data;
+	struct Node *next;
+}NODE;
+
+NODE *Insert(NODE *head,NODE *p)
+{
+	if(head==NULL)
+		return p;
+	NODE *cur=head;
+	while(cur-&gt;next!=NULL&amp;&amp;p-&gt;data&gt;cur-&gt;next-&gt;data)
+		cur=cur-&gt;next;
+	p-&gt;next=cur-&gt;next;
+	cur-&gt;next=p;
+	return head;
+}
+</pre>
+<div style="background-color:#C7C;height:1px;width:100%">
+</div>
+<p>(2)</p>
+<pre class="codes">void printbinary(unsigned value)
+{
+    int hiBit = 0;  // indicate highest bit reached
+
+    for (int i = 1, bit = 0; i  &lt;= 32; i++)    // unsigned: 2^32-1 max
+    {
+        bit = ((value &gt;&gt;(32 - i)) &amp; 0x1);
+        if (bit)
+        {
+            hiBit = 1;
+        }
+        if (hiBit)
+        {
+            printf("%d", bit);
+        }
+    }
+}
+
+void PRINT(char fmt[], unsigned value)
+{ // b u x o
+    for (int i = 0; i  &lt; strlen(fmt); i ++)
+    {
+        if (fmt[i] == '%')
+        {
+            switch (fmt[++i])
+            {
+                case 'b':
+                    printbinary(value);
+                    break;
+                case 'u':
+                    printf("%d", value);
+                    break;
+                case 'x':
+                    printf("%x", value);
+                    break;
+                case 'o':
+                    printf("%o", value);
+                    break;
+            }
+        }
+        else
+        {
+            printf("%c", fmt[i]);
+        }
+    }
+}
+
+int main()
+{
+    PRINT("BINARY: %b\n", 128);
+    return 0;
+}
+</pre>
+</div>
+
+<a id="pc04"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 239, 247);">
+<p>四、用杨辉三角计算组合数</p>
+</div>
+<pre class="codes">#include &lt;stdio.h&gt;
+#define MAXN 82
+long long solve(int N,int M)
+{
+    int i,j;
+    long long a[MAXN];
+    for(i=0;i&lt;=N;i++)
+    {
+        a[0]=1;
+        a[i]=1;
+        if(i&gt;1)
+            for(j=i-1;j&gt;0;j--)
+                a[j]=a[j]+a[j-1];
+    }
+    return a[M];
+}
+int main(void)
+{
+    int N,M;
+    scanf("%d%d",&amp;N,&amp;M);
+    printf("%lld\n",solve(N,M));
+    return 0;
+}
+</pre>
+</div>
+
+<a id="pc05"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 231, 207);">
+<p>1.已知一个线性表(1,3,2,6)<br>
+    (1)画出它的循环链表<br>
+    (2)画出它的带表头的双向链表存储结构<br>
+</p>
+</div>
+<p>(1) 1, 3, 2, 6
+head-&gt;1-&gt;3-&gt;2-&gt;6-&gt;1(指向1)</p>
+</div>
+
+<a id="pc06"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 199, 239);">
+<p>2.画出广义表(b(b,c),d)</p>
+</div>
+<pre>
+(b, (b, c), d)
+
+   ( )
+  / | \
+[b] | [d]
+   ( )
+   / \
+ [b] [c]</pre>
+</div>
+
+
+<a id="pc07"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(207, 231, 231);">
+<p>3.对一组数(5,8,2,9,6)分别采用选择排序和快速排序进行排序，写出排序过程中每一趟的结果</p>
+</div>
+<p>
+Selection Sort<br>
+{2},8, 5, 9, 6<br>
+{2, 5}, 8, 9, 6<br>
+{2, 5, 6}, 9, 8<br>
+{2, 5, 6, 8}, 9<br>
+2, 5, 6, 8, 9<br>
+<br>
+QSort<br>
+{2}, 5, {8, 9, 6}<br>
+2, 5, {6}, 8, {9}<br>
+2, 5, 6, 8, 9
+</p>
+</div>
+<a id="pc08"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 223, 239);">
+<p>4.(1)写二维数组t[2][7]按列序行序存储的地址公式（每个元素占s个存贮单元）<br>
+    (2)画出用十字链表表示稀疏矩阵方法中一个结点存储结果
+</p>
+</div>
+<p>//t[2][7]*s
+<br>
+&amp;t[i][j]=(j*2+i)*s
+
+</p><pre>(2)
+     CHead
+      [    ][ ^ ]
+RHead    |
+         |
+         V
+[   ]-&gt; i,j,e
+      down,right
+      </pre>
+      <p></p>
+</div>
+
+<a id="pc09"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(223, 255, 255);">
+<p>5.(1)写出在由结点值{1，3，5，7，9}组成的线性表进行二分查找，查找值6的整个查找过程<br>
+(2)画出由结点值{5,8,9,6,1}组成的一棵平衡查找树.
+</p>
+</div>
+<pre>(1)
+{1, 3, 5, 7, 9}
+ ^     ^     ^
+low   mid   high
+
+{1, 3, 5, 7, 9}
+          ^  ^
+         lowhigh
+          ^
+         mid
+{1, 3, 5, 7, 9}
+       ^  ^
+     highlow
+(2)
+{5, 8, 9, 6, 1}
+    8
+   / \
+  5   9
+ / \
+1   6
+</pre>
+</div>
+<a id="pc10"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(207, 215, 231);">
+<p>6.写出下图从1出发的一个深度优先搜索序列，并画出相应的深度优先生成树<br>
+求出下图一棵最小生成树</p>
+</div>
+<pre>(1)
+1-&gt;2-&gt;6-&gt;5-&gt;4-&gt;3
+
+(2)
+  1---2
+ /|   |\
+3 |   | \
+  |   |  \
+  4   5   6
+</pre>
+</div>
+<a id="pc11"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(231, 215, 207);">
+    <p>7.写函数<br>
+(1)已经一棵二叉树T的标准存储结构（指向树根的指针为t），写一个函数对此二叉树进行层次遍历（先写出基本思想，再写函数）
+<br>
+(2)已经一个无向图的邻接表（图有5个顶点），写一函数判断此无向图是否为连通图
+</p>
+</div>
+<p>
+(1)
+//使用队列进行按层遍历，类似于BFS遍历，将每次访问结点的左右结点插入队尾
+</p><pre class="codes">traverse(Node *t)
+{
+    Node *ptr;
+    InitQueue(Q); // 存储遍历序列
+    while(!QueueEmpty(Q))
+    {
+        DeQueue(Q, ptr);
+        printf("%d", ptr-&gt;data);
+        if (ptr-&gt;left != NULL)
+            EnQueue(Q, ptr-&gt;left);
+        if (t-&gt;right != NULL)
+            EnQueue(Q, ptr-&gt;right);
+    }
+}
+</pre><br>
+(2)
+//为每个顶点设置访问数组，从第一个顶点开始DFS深度遍历，DFS结束后，若访问数组全部为1，则表明图为连通图
+<pre class="codes">int visited[5] = { 0 }
+
+bool IsConnect(Graphic *g)
+{
+    // 1. DFS搜索
+    DFS(g, 0); // 从第一个顶点开始访问
+    // 2. 统计
+    for (v=0; v&lt;5; v++)
+        if (visited[v] == 0)
+            return false; // 不连通
+    return true; // 连通
+}
+
+DFS(Graphic *g, int v)
+{
+    // v 为当前工作顶点
+    visited[v] = 1;
+    for (w=FirstAdjVex(G, v); w&gt;=0; w=NextAdjVex(G, v))
+    // NextAdjVex 得到下一个邻结点，直到为空！
+    {
+        if (visited[v] == 0)
+        {
+            DFS(g, v);
+        }
+    }
+}
+</pre>
+<p></p>
+
+</div>
+
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  你的名字
+</b>:<br>可以参考kr137页，只用了2层嵌套
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  cstirling
+</b>:<br>最后一题DFS里面 visited[v]==0 和 DFS(g,v) 中v应该都换成w吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  ssss
+</b>:<br>typedef struct Node
+<br>{
+<br>	int data;
+<br>	struct Node *next;
+<br>}NODE;
+<br>NODE *Insert(NODE *head,NODE *p)
+<br>{
+<br>	if(head==NULL)
+<br>		return p;
+<br>	NODE *cur=head;
+<br>	while(cur-&gt;next!=NULL&amp;&amp;p-&gt;data&gt;cur-&gt;next-&gt;data)
+<br>		cur=cur-&gt;next;
+<br>	p-&gt;next=cur-&gt;next;
+<br>	cur-&gt;next=p;
+<br>	return head;
+<br>}
+<br>三的第一问可以写短点
+<br></p><p class="rep">#<span class="rep">malic</span>:好，既要代码短又要逻辑清楚是最好的</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  双非裸考
+</b>:<br>第三大题，如果p-&gt;data&lt;head-&gt;data是不是不能正确处理
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  bald girl
+</b>:<br>楼上说的对，三楼的代码没有处理插入节点比头节点数据小的可能，学长原来的代码把四种情况都写出来了，我觉得很清晰，建议学长以后修改代码时，保留不同的方法。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  bald girl
+</b>:<br>可能三楼的代码设定是表头节点中不含有数据，可是学长远离啊的代码设定是有数据的，那么，到底有没有呢？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  2122
+</b>:<br>第三题，链表没有特殊说明应该为不带头节点的链表吧，头节点应该单独处理，如果用答案应该说明链表是带头节点链表
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  2122
+</b>:<br>带表头就是带头节点，答案没错
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  yiko
+</b>:<br>第七题 层次遍历建队后 根结点先入队 否则一直对空 无法循环
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  风干橘子皮
+</b>:<br>第七题第一问，少了一步头结点入队
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  ddfkf
+</b>:<br>八楼人家说的是表头指针没说带表头
+<br><br></p>            </div>
+        </div>
+<!--
+<img style="width:50%;padding:150px;" src="../denote.png"/>
+-->
+</div>
+<script src="./2012年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</body></html>

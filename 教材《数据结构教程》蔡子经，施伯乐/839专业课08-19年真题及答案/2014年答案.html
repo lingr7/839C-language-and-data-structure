@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2014/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2014年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2014年答案_files/ansv3.css">
+  <script src="./2014年答案_files/cmt.js"></script>
+  <script src="./2014年答案_files/jquery.min.js"></script>
+  <script src="./2014年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2014年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2014年答案_files/font-awesome.css">
+
+    <title>2014年答案</title>
+
+<style>
+	table tr td
+	{
+		border:1px solid grey;
+	}
+		table tr th
+	{
+		text-align:center;
+		border:1px solid grey;
+	}
+</style>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2014/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+<a href="http://www.malic.xyz/ans839/2014/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>    
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2014/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2014/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+    <ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+
+    <div id="contents">
+        <br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(207, 231, 255);">
+<p> 第一题<br>
+</p>
+<p>
+1.在C99标准中，类型int和类型long long之间的区别是什么?<br>
+2.在程序中注解的作用是什么?<br>
+3.使用库函数时包含相应的头文件的目的是什么?例如，使用sqrt函数要包含math.h头文件<br>
+<img src="./2014年答案_files/p1title.png"><br>
+5.你经常使用的C语言编译器是哪一个?C程序的开发环境是哪一个?<br>
+在调试程序时设置断点的目的是什么?<br>
+</p>
+</div>
+
+        <p>
+(1)占用空间不同，int类型为4字节，而long long 类型为8字节。相应的，可表示的数据范围也不同，int类型可以表示[-2<sup>31</sup>,2<sup>31</sup>-1]的数据，而long long 表示[-2<sup>63</sup>,2<sup>63</sup>-1]的数据
+        </p>
+        
+        <p>(2)
+            在程序的开头加入注释，可以写明程序的一些必要信息，如创建者，时间，程序实现的功能以及参考来源等内容。<br>
+            程序代码当中适当加入一些注释，可以增加程序的易读性，便于与共同开发者进行交流。
+        </p>
+        <p>(3)
+            包含头文件在编译时相当于对指定库函数进行声明，这样在程序编译过程时才能调用到正确的函数，
+        </p>
+        <p>(4)
+            i=11<br>
+            j=11<br>
+            s=6<br>
+        </p>
+        <p>(5)
+            C语言的编译器gcc，（还有clang,cl,mscc等），开发常用编辑器vim和sublime Text，或者集成开发环境有Visual Studio 2017, codeblocks, dev C++等。(注意，不要将集成开发环境、编译器、编辑器等概念混淆)。<br>
+            设置断点是为了在程序调试时监视变量的变化以及程序的流程，常用于循环的边界调度或递归结构的调试。
+</p>
+</div>
+<a id="pc02"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 239, 239);">
+<p>读程序写结果</p>
+</div>
+        
+<p>
+模拟掷两颗骰子的点数之和，运行TIMES=6000000次的试验，程序中可以认为频率等于概率，计算各点数之和的概率，可知程序的输出
+</p>
+<pre>1:0.00
+2:0.02
+3:0.05
+4:0.08
+5:0.11
+6:0.13
+7:0.16
+8:0.13
+9:0.11
+10:0.08
+11:0.05
+12:0.02
+13:0.00
+</pre>
+
+</div>
+<a id="pc03"></a> <br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 199, 223);">
+<p>三、计算tribonacci数列<br>
+tribonacci数列定义为<br>
+</p><pre>T(0)=0,T(1)=T(2)=1
+T(n)=T(n-1)+T(n-2)+T(n-3) (当n&gt;2时)
+</pre>
+1.定义一个递归函数计算 T(n)<br>
+2.定义一个非递归函数计算T(n)<br>
+3.比较1和2中两个函数，执行函数计算T(10)时各自的加法次数是多少?哪个函数计算快?<br>
+4.当n较大时，定义的函数各自可能存在什么问题?<br>
+<p></p>
+</div>
+        <p>(1)        </p>
+
+<pre class="codes">int Tribo(int n)
+{
+    if (n==0)
+        return 0;
+    if(n==1 || n==2)
+        return 1;
+    return Tribo(n-1)+Tribo(n-2)+Tribo(n-3);
+}
+</pre>
+        <p>(2)</p>
+            <pre class="codes">int Tribo2(int N)
+{
+    if(N==0)
+        return 0;
+    else if(N==1||N==2)
+        return 1;
+    else{
+    int n,n1,n2,s=2;
+        n=1;
+        n1=1;
+        n2=0;
+        while(N&gt;2)
+        {
+            s=n+n1+n2;
+            n2=n1;
+            n1=n;
+            n=s;
+            N--;
+        }
+        return s;
+    }
+
+}
+
+            </pre>
+
+
+        <p>(3)
+            递归函数做192次加法，非递归做20次加法，非递归的函数运算快。
+        </p>
+<p>(4)
+    递归函数会占用较多内存空间以保存中间调用的过程，n稍大就会因内存栈帧用尽而不能运算。
+    非递归函数则可能因数据超出数据范围而计算出错误的结果。
+</p>
+</div>
+
+
+<a id="pc04"></a><br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 247, 231);">
+        <p>第四题，按要求写split函数</p>
+</div>
+<p>
+设计split传入3个参数，*string是待分割的字符串，key是分隔符，a[][]是目标数组<br>
+index记录总共分割的次数，最后分割次数作为split的返回值
+</p>
+<pre class="codes">#include &lt;stdio.h&gt;
+int split(char* string,char key,char a[100][100])
+{
+    int i,index=0,k=0;
+
+    for(i=0;string[i]!='\0';i++)
+    {
+        if(string[i]!=key)
+        {
+            a[index][k]=string[i];
+            ++k;
+        }
+        else
+        {
+            a[index][k]=0;
+            index++;
+            k=0;
+        }
+    }
+    return index;
+}
+</pre>
+
+</div>
+    <a id="pc05"></a>        <br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(215, 207, 247);">
+<p>第五题按要求写程序 对文本中的字符串排序</p>
+</div>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+#define MAXLENGTH 10000
+struct lineNode
+{
+    int hashValue;
+    int length;
+    char *contents;
+};
+int hash(char *s)
+{
+    int i,z=0;
+    for(i=0;s[i];i++)
+    {
+        if(('0'&lt;=s[i]&amp;&amp; s[i]&lt;='9')||'a'&lt;=s[i] &amp;&amp; s[i]&lt;='z')
+            z+=s[i];
+        if(z&gt;=10007)
+            z%=10007;
+    }
+    return z;
+}
+
+int cmp(const void*a,const void *b)
+{
+    struct lineNode m1=*(struct lineNode*)a,
+                    m2=*(struct lineNode*)b;
+    
+    if(m1.hashValue!=m2.hashValue)
+        return m1.hashValue-m2.hashValue;
+    else if(m1.length!=m2.length)
+        return m2.length-m1.length;
+    else
+        return strcmp(m2.contents,m1.contents);
+}
+
+int main(int argc, char *argv[])
+{
+    char msg[MAXLENGTH+1];
+    int i,N=atoi(argv[1]);
+    FILE *fin,*fout;
+    struct lineNode *data;
+    data=(struct lineNode*)malloc(N*sizeof(struct lineNode));
+
+    fin=fopen("data.in","r");
+    for(i=0;i&lt;N;i++)
+    {
+        fgets(msg,MAXLENGTH,fin);
+        if(msg[strlen(msg)-1]=='\n')
+            msg[strlen(msg)-1]=0;
+
+        data[i].hashValue=hash(msg);
+        data[i].length=strlen(msg);
+        
+        data[i].contents=(char*)malloc((strlen(msg)+1)*sizeof(char));
+        strcpy(data[i].contents,msg);
+    }
+    fclose(fin);
+
+    qsort(data,N,sizeof(data[0]),cmp);
+
+    fout=fopen("data.out","w");
+    for(i=0;i&lt;N;i++){
+        fputs(data[i].contents,fout);
+        fprintf(fout,"\n");
+    }
+    fclose(fout);
+
+    return 0;
+}
+</code>
+</pre>
+<p></p>
+</div>
+
+<a id="pc06"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 199, 207);">
+<p>六、已知线性表与一个索引函数，画出索引表.
+</p>
+</div>
+<p>根据索引函数画索引表</p>
+</div>
+
+<a id="pc07"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(215, 199, 207);">
+<p>七、双向链表中删除值为y的结点的函数
+</p>
+</div>
+<p>
+此解法是带表头的双向链表的操作。<br>
+</p>
+<pre class="codes">void Remove(List *head,int y)
+{
+    List *prev,*curr,*succ;
+    curr=Head-&gt;Next;
+    prev=head;
+    while(curr)
+    {
+        if(curr-&gt;Data==y)
+        {
+            succ=curr-&gt;Next;
+            prev-&gt;Next=succ;
+            succ-&gt;Last=prev;
+            free(curr);
+            curr=prev;
+        }
+        prev=curr;
+        curr=curr-&gt;Next;
+    }
+}
+
+</pre>
+</div>
+<a id="pc08"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(247, 231, 215);">
+<p>八、填空，将串s2加到串s1的末尾形成新串s1</p>
+</div>
+<pre>(1)&gt;=
+(2)&lt;=strlen(s2)
+(3)k++
+(4)k
+(5)k
+</pre>
+</div>
+<a id="pc09"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(239, 239, 207);">
+<p>九、分别写出对线性表(10,8,12,7,5)用快速排序和归并排序的每一趟过程</p>
+</div>
+<pre>QuickSort:
+(10,8,12,7,5)
+((8,7,5),10,(12))
+(((7,5),8),10,12)
+(5,7,8,10,12)
+MergeSort:
+((8,10),(7,12),5)
+((7,8,10,12),5)
+(5,7,8,10,12)
+</pre>
+</div>
+<a id="pc10"></a><br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 199, 247);">
+        <p>十、推导二维数组u[9][6]按行存储的地址公式（每元素占s个存储单元）</p>
+    </div>
+<pre>    &amp;a[i][0]=&amp;a[0][0]+6*i*s;
+    &amp;a[i][j]=&amp;a[i][0]+j*s=&amp;a[0][0]+6*i*s+j*s;
+</pre>
+</div>
+<a id="pc11"></a><br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(239, 199, 215);">
+        <p>十一、一棵二叉树T的中序遍历序列是BHECFG，前序为HBCEFG。画出求解T的整个过程</p>
+    </div>
+<p>简单，图示从略
+</p>
+</div>
+<a id="pc12"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(223, 207, 223);">
+    <p>十二、填空，完成在一棵查找树中查找一个值为a的函数</p>
+</div>
+<pre>(1)!=
+(2)*p_q
+(3)lchild
+(4)rchild
+</pre>
+</div>
+<a id="pc13"></a><br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(207, 239, 247);">
+        <p>十三、画出从顶点出发到各顶点的最短路径长度，要求画出一个表给出每步的求解步骤</p>
+</div>
+<pre><table>
+<tbody><tr>
+  <th rowspan="3">扫描次数</th>
+  <th colspan="8">终点</th>
+  <th rowspan="3">结果</th>
+
+ </tr>
+ <tr>
+  <th colspan="2">2</th>
+  <th colspan="2">3</th>
+  <th colspan="2">4</th>
+  <th colspan="2">5</th>
+
+  </tr>
+<tr>
+  <th>dist</th>
+  <th>path</th>
+  <th>dist</th>
+  <th>path</th>
+  <th>dist</th>
+  <th>path</th>
+  <th>dist</th>
+  <th>path</th>
+ </tr>
+ <tr>
+  <td>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td>∞</td>
+  <td>-1</td>
+  <td>5</td>
+  <td>1</td>
+  <td>4</td>
+  <td>1</td>
+  <td>(1,2)<br>1</td>
+ </tr>
+  
+ <tr>
+  <td>2</td>
+  <td> </td>
+  <td> </td>
+  <td>2</td>
+  <td>2</td>
+  <td>5</td>
+  <td>1</td>
+  <td>3</td>
+  <td>2</td>
+  <td>(1,3)<br>2</td>
+ </tr>
+  
+ <tr>
+  <td>3</td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td>5</td>
+  <td>1</td>
+  <td>3</td>
+  <td>2</td>
+  <td>(1,5)<br>3</td>
+ </tr>
+   <tr>
+  <td>4</td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td>5</td>
+  <td>1</td>
+  <td> </td>
+  <td> </td>
+  <td>(1,4)<br>5</td>
+ </tr>
+  
+  
+  
+  </tbody></table>
+
+
+
+</pre>
+    </div>
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  malic
+</b>:<br>Hello?
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  19。。
+</b>:<br>请问第三题的两个函数的加法次数怎么算出来的
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  双非跨考
+</b>:<br>那个第七题双向链表删除那个，好像没有考虑cur-&gt;next为空的情况
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  华少666
+</b>:<br>快速排序是不是出了问题啊  
+<br>第一次 5  8 7 10 12
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  Bald girl
+</b>:<br>没错，2楼说的对，双向链表没考虑，值为最后一个结点时的情况
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  Bald girl
+</b>:<br>四楼说的对，快排好像也写错了
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  im0qianqian
+</b>:<br>这里没有对评论进行回复的功能QAQ ，首先回复四楼和六楼，答案中快排的思路没有问题，唯一的不同就是我们根据比较基准来移动的方法，这种方法不唯一的。
+<br>然后发现的一个问题是第八题第二个空应该直接填&lt;=j ，因为字符串的长度之前已经算出来了。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  TEST
+</b>:<br>第三题3的非递归不算210应该是16次才对吧
+<br>另外，4无论递归还是非递归都有越界的风险吧- -
+<br></p><p class="rep">#<span class="rep">malic</span>:主要是递归方法能进行运算的次数有限，先考虑的是计算时间无法接受，远远到不了数据溢出的数值大小</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  TEST
+</b>:<br></p><pre><code>
+<br>int hash(char *s)
+<br>{
+<br>    int res = 0;
+<br>    while(*s != '\0')
+<br>    {
+<br>        if(('0' &lt;= *s &amp;&amp; *s &lt;= '9') || ('a' &lt;= *s &amp;&amp; *s &lt;= 'z') || ('A' &lt;= *s &amp;&amp; *s &lt;= 'Z'))
+<br>            res += *s;
+<br>        s++;
+<br>    }
+<br>    return res % 10007;
+<br>}
+<br>
+<br>typedef struct Line
+<br>{
+<br>    char *string;
+<br>    int len;
+<br>    int hash;
+<br>}Line;
+<br>
+<br>Line line[100];
+<br>
+<br>int cmp(void const *a, void const *b)
+<br>{
+<br>    int m = *(int*)a, n = *(int*)b;
+<br>    if(line[m].hash != line[n].hash)
+<br>    {
+<br>        return line[m].hash - line[n].hash;
+<br>    }
+<br>    else if(line[m].len != line[n].len)
+<br>    {
+<br>        return line[n].len - line[m].len;
+<br>    }
+<br>    else
+<br>    {
+<br>        return strcmp(line[n].string, line[m].string);
+<br>    }
+<br>}
+<br>
+<br>int main()
+<br>{
+<br>    FILE *fpin, *fpout;
+<br>    fpin = fopen("data.in", "r");
+<br>    fpout = fopen("data.out", "w");
+<br>    char a[10000];
+<br>    int cl[100];
+<br>    int i = 0;
+<br>    while (fscanf(fpin, "%s", a) != EOF)
+<br>    {
+<br>        line[i].len = (int)strlen(a);
+<br>        line[i].string = (char*)malloc(sizeof(char) * (line[i].len + 1));
+<br>        strcpy(line[i].string, a);
+<br>        line[i].hash = hash(line[i].string);
+<br>        i++;
+<br>    }
+<br>    qsort(cl, (size_t)i, sizeof(int), cmp);
+<br>    for (int j = 0; j &lt; i; ++j)
+<br>    {
+<br>        fprintf(fpout, "%s\n", line[cl[j]].string);
+<br>    }
+<br>    return 0;
+<br>}
+<br></code></pre>
+<br>/*
+<br>题目还有要求元素交换时数据量小，应该直接交换下标
+<br>给出的代码hash函数里没有计算大写字母的ASCII值
+<br>按题意，信息应该指data.in中的字符，不包括hash值和长度
+<br>*/
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  啥都不会
+</b>:<br>第九题：
+<br>QuickSort:
+<br>(10,8,12,7,5)
+<br>((5,8,7),10,(12))
+<br>(5,(8,7),10,12)
+<br>(5,7,8,10,12)
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  风干橘子皮
+</b>:<br>读程序那个，没有13
+<br> 1 : 0.00
+<br> 2 : 0.03
+<br> 3 : 0.06
+<br> 4 : 0.08
+<br> 5 : 0.11
+<br> 6 : 0.14
+<br> 7 : 0.17
+<br> 8 : 0.14
+<br> 9 : 0.11
+<br>10 : 0.08
+<br>11 : 0.06
+<br>12 : 0.03
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  风干橘子皮
+</b>:<br>（接读程序题）并且输出的小数部分要四舍五入，不能仅仅向下取整
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  路过的假面骑士
+</b>:<br>C语言第三题的第三小题非递归应该是16次加法吧，因为从10到2循环了8次，每次做两个加法
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  一名路过又回过头来的假面骑士
+</b>:<br>接上条，，是2014年c语言第三题
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  Annetree
+</b>:<br>第二题输出结果中应该去掉13
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  昵称(至少4个字符)
+</b>:<br>C语言分析程序题，1到9前面应该有空格，是 1:0.00这样子，要和10 11 12 对齐
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  昵称(至少4个字符)
+</b>:<br>C语言程序分析题，答案确实应该四舍五入而不是向下取整
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>18楼-<b>  昵称(至少4个字符)
+</b>:<br>第七题，双向链表为啥要pre，直接-&gt;prior就ok了
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>19楼-<b>  旧庐杜门
+</b>:<br>第三题，递归加法，可以观察到，为求T(4)，加法次数为（0+0+2）+2共4次，建立一个数列a(n)，记录计算T(n)时使用加法的次数，那么有a(n)==a(n-1)+a(n-2)+a(n-3)+2，如此递推得n==10时，为计算T（10）运行的加法次数为192。至于非递归，右移一项，再计算2次加法，操作10次，故运行加法次数为20次。
+<br>计算骰子点数之和,prinf,其中%f是本是对下取整，但运行确实四舍五入了，与k&amp;r书上的说法不同
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>20楼-<b>  旧庐杜门
+</b>:<br>第四题，有一句需要修改
+<br> a[index][k]=0;
+<br>应修改为a[index][k] = '\0';
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>21楼-<b>  旧庐杜门
+</b>:<br>第五题
+<br>/*
+<br>	Name: 读入文件hash排序写入文件 
+<br>	Copyright: 
+<br>	Author: lingr7
+<br>	Date: 16/12/18 22:04
+<br>	Description: 节省了现有答案结构体的开销 
+<br>*/
+<br>#include &lt;stdio.h&gt;
+<br>#include &lt;stdlib.h&gt;
+<br>#include &lt;string.h&gt;
+<br>
+<br>#define MAXN 1005
+<br>int hash(char *s){
+<br>	int i, sum;
+<br>	char *p;
+<br>	sum = 0;
+<br>	for(p = s; *p; p++){
+<br>		sum += i;
+<br>		if(sum &gt; 10007)
+<br>			sum = sum % 10007;
+<br>	}
+<br>	return sum;
+<br>}
+<br>int cmp(const void *a, const void *b){
+<br>	char *p, *q;
+<br>	p = (char*)a;
+<br>	q = (char*)b;
+<br>	if(hash(p) != hash(q))
+<br>		return hash(p) - hash(q);
+<br>	else if(strlen(p) != strlen(q))
+<br>		return strlen(q) - strlen(p);
+<br>	else 
+<br>		return strcmp(q,p);
+<br>}
+<br>void Loaddata(FILE *in, char m[][MAXN]){
+<br>	int i = 0;
+<br>	while(fscanf(in, "%s", m[i]) != EOF)
+<br>		i++;
+<br>}
+<br>int main(char argc, char *argv[]){
+<br>	int i, N = atoi(argv[1]);/*命令行第一个参数*/
+<br>	char a[N][MAXN];
+<br>	FILE *fin, *fout;
+<br>	fin = fopen(argv[2], "r");
+<br>	Loaddata(fin, a);
+<br>	fclose(fin);
+<br>	qsort(a, N, sizeof(char[MAXN]), cmp);
+<br>	fout = fopen(argv[3], "w");
+<br>	for(i = 0; i &lt; N; i++){
+<br>		fprintf(fout, "%s\n", a[i]);
+<br>	} 
+<br>	fclose(fout);
+<br>	return 0;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>22楼-<b>  姑娘加油
+</b>:<br>第七题倒数第三行好像应该是prev＝succ;
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>23楼-<b>  姑娘加油
+</b>:<br>说错了，是curr＝succ;留言删不掉啦
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>24楼-<b>  hhhh
+</b>:<br>文件排序少了统计大写字母咯
+<br><br></p>            </div>
+        </div>
+
+<br>
+<!--
+<img style="width:50%;padding:130px;" src="../denote.png"/>
+-->
+</div>
+
+
+
+<script src="./2014年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+</body></html>

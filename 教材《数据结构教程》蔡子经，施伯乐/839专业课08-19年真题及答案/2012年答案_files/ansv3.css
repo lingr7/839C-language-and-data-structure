@@ -1,0 +1,62 @@
+
+p
+{
+    margin:10px 10px;
+}
+pre
+{
+    margin:0 20px;
+    font-family:'YaHei Consolas Hybrid', Consolas, 'Malgun Gothic', 'Segoe UI', Helvetica, monospace, monospace;
+    white-space:pre-wrap;
+    word-break:keep-all;
+    line-height:1.45;
+    color:rgb(51,51,51);
+}
+code
+{
+    font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    color:inherit;
+    border:0px;
+    display:inline;
+    line-height:inherit;
+    ackground:transparent;
+}
+p.rep
+{
+    font-size:80%;
+}
+span.rep
+{
+    color:#33F;
+}
+#contents
+{
+    width:90%;
+    height:100%;
+    margin:0 auto;
+}
+div.subAns{
+    border:solid 1px;
+    border-radius: 0 0 12px 12px;
+}
+div.qtitle
+{
+    border:dotted 1px;
+}
+div#floatNavi
+{
+    width:30px;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+}
+div#floatNavi a
+{
+    display:inline-block;
+    background-color:#CEC;
+    text-align:center;
+    vertical-align:center;
+    margin:5px;
+    width:40px;
+    height:40px;
+}

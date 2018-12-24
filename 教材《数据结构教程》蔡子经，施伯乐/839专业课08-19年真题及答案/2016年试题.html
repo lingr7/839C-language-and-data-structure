@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2016/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2016年试题_files/foundation.min.css">
+  <link rel="stylesheet" href="./2016年试题_files/ansv3.css">
+  <script src="./2016年试题_files/cmt.js"></script>
+  <script src="./2016年试题_files/jquery.min.js"></script>
+  <script src="./2016年试题_files/foundation.min.js"></script><style></style>
+  <script src="./2016年试题_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2016年试题_files/font-awesome.css">
+
+	<title>2016年试题</title>
+
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+<div id="denote" class="reveal-modal" data-reveal="">
+  <h2>打赏</h2>
+  <p></p>
+  <div style="width:50%;margin:0 auto;">
+  <img src="./2016年试题_files/denote.png">
+  </div>
+  <a class="close-reveal-modal">×</a>
+</div>
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2016/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+<a href="http://www.malic.xyz/ans839/2016/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2016/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2016/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+<ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+
+<div id="contents">
+
+
+<a id="pc1"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(215, 239, 199);">
+<p>
+1. 在C程序中如何获取命令行参数？<br>
+如果命令行为a.out x y “1 2 3/”<br>
+则参数值为多少个？每个参数分别是什么类型和值？<br>
+2. 简述函数指针的用处.举例定义一个函数指针并对其进行初始化 	或赋值<br>
+
+</p>
+</div>
+<p>
+1.有3个参数，分别是"x"  "y" "1,2,3/"，每个参数的类型是main函数的参数定义的char*[]类型.<br>
+2.函数指针可以当作函数参数，使函数的可用性更强，就像qsort()函数的第四个参数cmp函数。还有一种使用就是放在数组里使用，可以用索引值去调用对应的函数。<br>
+</p>
+</div>
+
+<a id="pc2"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 215, 199);">
+<img style="margin:0 auto;width:70%" src="./2016年试题_files/pc2.png">
+</div>
+<pre>int bitsSwapRequired(int x,int y)
+{
+    int n = 0;
+    unsigned mask = 1u&lt;&lt;31;//1000 0000 0000 0000 0000 0000 0000 0000
+    for(;mask;mask&gt;&gt;=1)
+    {
+        if((x&amp;mask) != (y&amp;mask))//取出对应位的值比较
+            ++n;
+    }
+    return n;
+}
+
+</pre>
+<br>
+</div>
+
+
+<a id="pc3"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 239, 215);">
+<p>
+三、写函数定义<br>
+定义一个函数htoi(s)，其将一个十六进制字符串(包括可选的0x或0X开头)转换成等值的整数值S可包括字符0到9，a到f，A到F，及x和X。<br>
+例如：htoi(“11”)的值为17；htoi((0xa)的值为10。<br>
+函数原型为：int htoi(char *s)<br>
+
+</p>
+</div>
+<p>
+传入的肯定不是空串，所以s[1]必定是合法的数值，要么是某个字符，要么是串长为1时的结束符'\0'，如果串长不是1,先判断是否有0x或0X作为开头字符，若有则跳过这两个字符。对s逐字符读取并累加，最后返回累加值。
+</p>
+<pre class="codes">int htoi(char *s)
+{
+    if(s[1]!='\0')
+    {
+        //skip '0x'
+        if(s[1]=='x' || s[1]=='X')
+            s=s+2;
+    }
+    int i,sum=0;
+    for(i=0;s[i];i++)
+    {
+        if('0'&lt;=s[i] &amp;&amp; s[i]&lt;='9')
+            sum=sum*16+(s[i]-'0');
+        if('a'&lt;=s[i] &amp;&amp; s[i]&lt;='f')
+            sum=sum*16+10+(s[i]-'a');
+        if('A'&lt;=s[i] &amp;&amp; s[i]&lt;='F')
+            sum=sum*16+10+(s[i]-'A');
+    }
+    return sum;
+}
+
+</pre>
+</div>
+
+<a id="pc4"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(223, 247, 231);">
+四、写函数定义<br>
+定义函数sortLinkedList(h)，其将h所指的一个单项链表按照节点中存放的字符串值的字典升序排序，返回指向排序后的第一个节点的指针。不能使用临时的结点缓冲区。<br>
+函数原型为：NODE* sortLinkedList(char *data;struct Node *next;)NODE;<br>
+其中data指向不等长的字符数组表示的字符串。<br>
+<p></p>
+</div>
+讨论区里提供了完整可运行的代码：<a href="http://www.malic.xyz/ans839/2016/problem04.txt" target="_blank">查看完整代码</a>
+<pre class="codes">typedef struct Node{
+    char *data;
+    struct Node *next;
+}Node;
+
+Node* sortLinkedList(Node *h)
+{
+    if(!h-&gt;next)
+    {
+        return h;
+    }
+    Node *node = h, *l = NULL, *r = NULL, *rnode = NULL, *lnode = NULL, *hr = h;
+    /*比头结点小的放左子链表，大的放右子链表*/
+    while(node-&gt;next)
+    {
+        if(*h-&gt;data - *node-&gt;next-&gt;data &gt; 0)//- -取指符号
+        {
+            if(!l)
+            {
+                l = lnode = node-&gt;next;//初始化子链头结点和构建节点
+            }
+            else
+            {
+                lnode-&gt;next = node-&gt;next;
+                lnode = lnode-&gt;next;
+            }
+            node = node-&gt;next;
+        }
+        else if(*h-&gt;data - *node-&gt;next-&gt;data == 0)
+        {
+            hr-&gt;next = node-&gt;next;
+            hr = hr-&gt;next;
+            node = node-&gt;next;
+        }
+        else
+        {
+            if(!r)
+            {
+                r = rnode = node-&gt;next;
+            }
+            else
+            {
+                rnode-&gt;next = node-&gt;next;
+                rnode = rnode-&gt;next;
+            }
+            node = node-&gt;next;
+        }
+    }
+    lnode-&gt;next = NULL;//截断子链表
+    rnode-&gt;next = NULL;
+    /*递归排序子链并链接原头结点*/
+    if(l)
+    {
+        l = sortLinkedList(l);
+        lnode = l;
+        while(lnode-&gt;next)
+        {
+            lnode = lnode-&gt;next;
+        }
+        lnode-&gt;next = h;
+    }
+    else
+    {
+        l = h;
+    }
+    if(r)
+    {
+        r = sortLinkedList(r);
+    }
+    hr-&gt;next = r;
+    return l;
+}
+</pre>
+<div style="background-color:#C3:3;heigth:1px;width:100%"></div>
+<p>使用归并排序
+</p>
+<pre class="codes">Node *merge(Node *l1,Node *l2)
+{
+	Node *p=l1,*q=l2,*tail;
+	int res;
+	Node *dummy=(Node *)malloc(sizeof(Node));
+	dummy-&gt;data="0";
+	dummy-&gt;next=NULL;
+    tail=dummy;
+    while(p&amp;&amp;q)
+    {
+    	res=strcmp(p-&gt;data,q-&gt;data);
+    	if(res&lt;0)
+    		{
+    			tail-&gt;next=p;
+    			p=p-&gt;next;
+    			tail=tail-&gt;next;
+				tail-&gt;next=NULL; 
+    		}
+    	else
+    	{
+    		  	tail-&gt;next=q;
+    			q=q-&gt;next;
+    			tail=tail-&gt;next;
+				tail-&gt;next=NULL; 
+    		  
+    	}		
+    }
+    if(p)
+    	tail-&gt;next=p;
+    if(q)
+    	tail-&gt;next=q;
+    return dummy-&gt;next;
+}
+Node* sortLinkedList(Node *h)
+{
+	if(h==NULL||h-&gt;next==NULL)
+		return h;
+	Node *mid=NULL,*slow=h,*fast=h;
+	Node *left=NULL,*right=NULL;
+	while(fast-&gt;next!=NULL&amp;&amp;fast-&gt;next-&gt;next!=NULL)
+	{
+		slow=slow-&gt;next;
+		fast=fast-&gt;next-&gt;next;
+	}
+	mid=slow;
+	slow=slow-&gt;next;
+	mid-&gt;next=NULL;
+	left=sortLinkedList(h);
+	right=sortLinkedList(slow);
+	return merge(left,right);
+}
+
+</pre>
+
+<div style="background-color:#CF3;heigth:1px;width:100%;overflow:hidden;">
+</div>
+<p>选择排序</p>
+<pre class="codes">
+//  链表的排序
+//  采用选择排序，每次把链中的最大节点摘下来，按照没有头节点的链表头插
+//  法插入
+void sortLinkedList(Lode * list){
+  int data[10];
+    int i = 0;
+    srand(time(NULL));
+    for(i=0;i&lt;10;i++){
+         data[i] = rand()%(rand()0);
+    }
+    //LNode * list = createWithoutHead(data,10);
+    printList(list);
+    LNode  *h=list,*p,*q,*r,*s;
+    list = NULL;
+    while(h!=NULL){
+        p=s=h;
+        q=r=NULL;
+        while(p!=NULL){
+            if(p-&gt;data&gt;s-&gt;data){
+                s = p;
+                r = q;
+            }
+            q = p;
+            p = p-&gt;next;
+        }
+        if(s==h){
+            h = h-&gt;next;
+        } else {
+            // 摘下当前最大的结点
+            // h逐渐减少
+            r-&gt;next = s-&gt;next;
+        }
+        //printList(list);
+        //头插，随后的序列为剩序
+        s-&gt;next = list;
+        list = s;
+        if(h!=NULL)
+            printList(h);
+        // 当 h 上的结点全部取下来之后，结束循环
+    }
+   printList(list);
+}
+</pre>
+</div>
+
+
+<a id="pc5"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(207, 247, 199);">
+<img style="margin:0 auto;width:70%" src="./2016年试题_files/pc5.png">
+</div>
+<p>由题目可知，按商品名排序，相同品名的商品都相邻，这样不需要造hash表。
+每读到一行就与上一行的商品名相比，如果一样就累加收入，不一样则就把上一个商品输出到文件，再开始对下一个商品进行累计。</p>
+<p>程序中定义了brand[2][82]用于保存商品名，也就是有brand[0]和brand[1]两个char数组，当前商品名的下标为k时，另一个商品名为1-k，可以省去反复的对字符串的复制操作的开销。程序中如果刚读到的商品名和当前操作的商品名一致，则加到累加，若不一致则输出当前的商品名brand[k]，并把当前操作的商品名调整为k=1-k。<br>
+最后读文件到EOF结束后，当前操作的文件肯定不会输出，所以在循环外需要单独将最后一次操作的商品信息输出到文件当中。
+</p>
+<pre class="codes">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc,char *argv[])
+{
+    FILE *fin,*fout;
+    char brand[2][82];
+    double sum,price;
+    int k=0;
+
+    fin=fopen(argv[1],"r");
+    fout=fopen(argv[2],"w");
+
+    fscanf(fin,"%s%lf",brand[k],&amp;price);
+    sum=price;
+    
+    while(fscanf(fin,"%s%lf",brand[1-k],&amp;price)!=EOF)
+    {
+        if(strcmp(brand[0],brand[1])==0)
+        {
+            sum+=price;
+        }
+        else
+        {
+            
+            fprintf(fout,"%s %.2f\n",brand[k],sum);
+            sum=price;
+            k=1-k;
+        }
+    }
+    fprintf(fout,"%s %.2f\n",brand[k],sum);
+    fclose(fin);
+    fclose(fout);
+    return 0;
+}
+
+</pre>
+<br>
+</div>
+
+<a id="pc6"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(231, 247, 215);">
+<p>
+六、画出广义表D=(a,D,(b,c),(e,D)).
+</p>
+</div>
+<br>
+</div>
+
+<a id="pc7"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 247, 223);">
+<p>七、已知一个线性表(28,12,19,10,21),对它分别进行插入排序和基数排序，请写出每趟处理后的结果
+</p>
+</div>
+<pre>原序列：28,12,19,10,21
+第一趟插入排序后：12,28,19,10,21
+第二趟插入排序后：12,19,28,10,21
+第三趟插入排序后：10,12,19,28,21
+第四趟插入排序后：10,12,19,21,28
+第一趟基数排序后：10,21,12,28,19
+第二趟基数排序后：10,12,19,21,28
+</pre>
+</div>
+
+<a id="pc8"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(247, 207, 239);">
+<p>
+1.	写出5维数组f[7][3][6][8][2]的地址公式.<br>
+2.	已知一个5行8列的稀疏矩阵中有7个非零元素，它采用十字链表的存贮结构，请分析十字链表中共有多少个结点。<br>
+</p>
+</div>
+<br>
+</div>
+
+<a id="pc9"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 207, 231);">
+<p>
+九、已知一颗二叉树的标准形式的存储结构，写出利用其叶子节点中的指针域，把所有叶子节点链接成一个带有表头结点的单链表的函数。要求：先简要写出编程的算法思想和主要步骤再写函数。
+</p>
+</div>
+<p>算法思想和主要步骤：采用中序遍历，遍历所有节点，若是叶子节点，则采用尾插法将其加入单链表中，若不是则继续遍历。注意将第一个结点加入链表的特殊处理。</p>
+</div>
+
+<a id="pc10"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 247, 247);">
+<p>
+十、已知在一棵含有n个结点的树中，只有度为k的结点和度为0的叶子节点，请求出此树含有的叶子节点的数目。
+</p>
+</div>
+
+<p>
+设叶子节点有x个，则度为k的有n-x个 <br>
+一棵树的节点数等于总度数加1 <br>
+所以n = k *(n - x) + 1 <br>
+故x = n - (n - 1)/k个 <br>
+</p>
+</div>
+
+<a id="pc11"></a><br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(247, 247, 247);">
+<p>十一、已知一个有5个顶点的无向图的邻接表，写出判断它是否为一棵树的函数。要求：先简要写出编程的算法思想和主要步骤后再写函数。</p>
+</div>
+<br>
+</div>
+
+
+<!--
+<img style="width:50%;padding:130px;" src="../denote.png"/>
+-->
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  起起落落
+</b>:<br>malic学长niubility！学长学长~你是我的偶像~
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  北落师门
+</b>:<br>malloc大佬
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  TEST
+</b>:<br>#<span style="color:#C00">{第4题代码，已更新到题目中}</span>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  TEST
+</b>:<br>大佬啥时候做个贴代码的面板啊
+<br></p><p style="font-size:80%;"># <span style="color:#33E;"><b>malic</b>:</span>我在后台可以看到格式化的代码，给你更新到题目里了，我只能用课余时间做网站，只有一些基本的功能，最近是没有时间加功能了。</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  膜拜膜拜
+</b>:<br>无价之宝！大佬还招徒弟吗，朝九晚五无偿码农
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  面向世界
+</b>:<br>第二题
+<br></p><pre class="codes"><br>#include&lt;stdio.h&gt;
+<br>int bitsSwapRequired(int x,int y);
+<br>int main(void)
+<br>{
+<br>	int x = 1,y = 10;
+<br>	int n = 0;
+<br>	n = bitsSwapRequired(x,y);
+<br>	printf("%d\n",n);
+<br>}
+<br>int bitsSwapRequired(int x,int y)
+<br>{
+<br>	int n = 0;
+<br>	unsigned mask = 1u&lt;&lt;31;//1000 0000 0000 0000 0000 0000 0000 0000
+<br>	for(;mask;mask&gt;&gt;=1)
+<br>	{
+<br>		if((x&amp;mask) != (y&amp;mask))//取出对应位的值比较
+<br>			++n;
+<br>	}
+<br>	return n;
+<br>}
+<br></pre>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  面向世界
+</b>:<br>第十题
+<br>设叶子节点有x个，则度为k的有n-x个
+<br>一棵树的节点数等于总度数加1
+<br>所以n = k *(n - x) + 1
+<br>故x = n - (n - 1)/k个
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  Bald girl
+</b>:<br>问下学长，我一直觉得函数定义和程序题两种是不一样的，前者只要写出函数定义，后者是要写出一个程序从头文件开始，我这种观念是否正确？
+<br>还有楼上直接用sizeof不是更好
+<br></p><p style="font-size:80%">#<span class="rep">malic</span>:是这样的，现在的题型一般是三到四个函数题和一个程序题。函数题不需要写main()，只写函数的实现就可以，程序题是完整的程序代码，各个函数和int main(){ return 0;}都要写</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  面向世界
+</b>:<br>函数定义应该不需要写完整的，我是用编译器写好验证了就顺便复制过来了。
+<br>sizeof是指哪个？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  shortCodeMan
+</b>:<br>int bitsSwapRequired(int x,int y)
+<br>{
+<br>	int ans=x^y,count=0;
+<br>	while(ans)
+<br>	{
+<br>		ans&amp;=(ans-1);
+<br>		count++;
+<br>	}
+<br>	return count;
+<br>}
+<br>需要变化的位数就是不同的位数的个数，不同的位异或后是一，对异或后的结果统计其1的个数即可
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  shortCodeMan
+</b>:<br>Node *merge(Node *l1,Node *l2)
+<br>{
+<br>	Node *p=l1,*q=l2,*tail;
+<br>	int res;
+<br>	Node *dummy=(Node *)malloc(sizeof(Node));
+<br>	dummy-&gt;data="0";
+<br>	dummy-&gt;next=NULL;
+<br>    tail=dummy;
+<br>    while(p&amp;&amp;q)
+<br>    {
+<br>    	res=strcmp(p-&gt;data,q-&gt;data);
+<br>    	if(res&lt;0)
+<br>    		{
+<br>    			tail-&gt;next=p;
+<br>    			p=p-&gt;next;
+<br>    			tail=tail-&gt;next;
+<br>				tail-&gt;next=NULL; 
+<br>    		}
+<br>    	else
+<br>    	{
+<br>    		  	tail-&gt;next=q;
+<br>    			q=q-&gt;next;
+<br>    			tail=tail-&gt;next;
+<br>				tail-&gt;next=NULL; 
+<br>    		  
+<br>    	}		
+<br>    }
+<br>    if(p)
+<br>    	tail-&gt;next=p;
+<br>    if(q)
+<br>    	tail-&gt;next=q;
+<br>    return dummy-&gt;next;
+<br>}
+<br>Node* sortLinkedList(Node *h)
+<br>{
+<br>	if(h==NULL||h-&gt;next==NULL)
+<br>		return h;
+<br>	Node *mid=NULL,*slow=h,*fast=h;
+<br>	Node *left=NULL,*right=NULL;
+<br>	while(fast-&gt;next!=NULL&amp;&amp;fast-&gt;next-&gt;next!=NULL)
+<br>	{
+<br>		slow=slow-&gt;next;
+<br>		fast=fast-&gt;next-&gt;next;
+<br>	}
+<br>	mid=slow;
+<br>	slow=slow-&gt;next;
+<br>	mid-&gt;next=NULL;
+<br>	left=sortLinkedList(h);
+<br>	right=sortLinkedList(slow);
+<br>	return merge(left,right);
+<br>}
+<br>时间复杂度o(nlogN)
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  学到四点
+</b>:<br>//  链表的排序
+<br>//  采用选择排序，每次把链中的最大节点摘下来，按照没有头节点的链表头插
+<br>//  法插入
+<br>void sortLinkedList(Lode * list){
+<br>  int data[10];
+<br>    int i = 0;
+<br>    srand(time(NULL));
+<br>    for(i=0;i&lt;10;i++){
+<br>         data[i] = rand()%(rand()0);
+<br>    }
+<br>    //LNode * list = createWithoutHead(data,10);
+<br>    printList(list);
+<br>    LNode  *h=list,*p,*q,*r,*s;
+<br>    list = NULL;
+<br>    while(h!=NULL){
+<br>        p=s=h;
+<br>        q=r=NULL;
+<br>        while(p!=NULL){
+<br>            if(p-&gt;data&gt;s-&gt;data){
+<br>                s = p;
+<br>                r = q;
+<br>            }
+<br>            q = p;
+<br>            p = p-&gt;next;
+<br>        }
+<br>        if(s==h){
+<br>            h = h-&gt;next;
+<br>        } else {
+<br>            // 摘下当前最大的结点
+<br>            // h逐渐减少
+<br>            r-&gt;next = s-&gt;next;
+<br>        }
+<br>        //printList(list);
+<br>        //头插，随后的序列为剩序
+<br>        s-&gt;next = list;
+<br>        list = s;
+<br>        if(h!=NULL)
+<br>            printList(h);
+<br>        // 当 h 上的结点全部取下来之后，结束循环
+<br>    }
+<br>   printList(list);
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  万古星空悬皓月
+</b>:<br>c语言把函数的指针当成指向数据的指针对待，因此函数指针可以作为其他函数的参数，作为返回值传递， 作为数组的元素，结构体共用体的成员等等。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  万古星空悬皓月
+</b>:<br>/*
+<br>  基于快排的思想，利用头插法建立小链和大链
+<br>*/
+<br>Node *qsort(Node *link){
+<br>    if(!link || !link-&gt;next){
+<br>        return link;
+<br>    } else {
+<br>        Node *left = NULL;
+<br>        Node *right = NULL;
+<br>        Node *cur = link-&gt;next;
+<br>        while (cur) {
+<br>            if (strcmp(link-&gt;data, cur-&gt;data) &gt; 0) {
+<br>                link-&gt;next = right;
+<br>                right = link;
+<br>            } else {
+<br>                link-&gt;next = left;
+<br>                left = link;
+<br>            }
+<br>            cur = cur-&gt;next;
+<br>        }
+<br>
+<br>        left = qsort(left);
+<br>        right = qsort(right);
+<br>        Node * head = left;
+<br>        while(left-&gt;next)
+<br>            left = left-&gt;next;
+<br>        left-&gt;next = link;
+<br>        link-&gt;next = right;
+<br>        return head;
+<br>    }
+<br>
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  yedunan
+</b>:<br>请问16年那个广义表怎么画
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  TEST
+</b>:<br>第九题
+<br>void getleaves(NodePtr tree)
+<br>{
+<br>    if(tree-&gt;l)
+<br>        getleaves(tree-&gt;l);
+<br>    if(tree-&gt;r)
+<br>        getleaves(tree-&gt;r);
+<br>    if(!tree-&gt;r &amp;&amp; !tree-&gt;l)
+<br>    {
+<br>        head-&gt;r = (NodePtr)malloc(sizeof(LinkNode));
+<br>        *head-&gt;r = *tree;
+<br>        head = head-&gt;r;
+<br>    }
+<br>}
+<br>head = (NodePtr)malloc(sizeof(LinkNode));
+<br>NodePtr tree = InitBinaryTree(), mid = head;
+<br>getleaves(tree);
+<br>head = mid;
+<br>//head是全局变量，没想明白靠传递变量递归怎么弄
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  TEST
+</b>:<br>第十一题是不是只要判断有没有回路就行啦
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>18楼-<b>  M神牛逼
+</b>:<br>int bitSwapRequired(int x, int y) {
+<br>
+<br>	int count = 0;
+<br>	while (x &gt; 0 || y &gt; 0) {
+<br>		if ((x &amp; 1) != (y &amp; 1)) {
+<br>			count += 1;
+<br>		}
+<br>		x &gt;&gt;= 1;
+<br>		y &gt;&gt;= 1;
+<br>	}
+<br>	return count;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>19楼-<b>  可以对吗？？
+</b>:<br>//第九题
+<br>typedef struct Tree {
+<br>	int data;
+<br>	struct Tree *lchild;
+<br>	struct Tree *rchild;
+<br>	TreeNode *next;
+<br>}TreeNode,*BiTree,*LinkList;
+<br>
+<br>void leapLink(BiTree &amp;T,LinkList &amp;L) {
+<br>
+<br>	if (T-&gt;lchild)leapLink(T-&gt;lchild, L);
+<br>	if (T-&gt;lchild == NULL&amp;&amp;T-&gt;rchild==NULL) {
+<br>		//叶子节点， 接到链表后面即可
+<br>		if (!L)L = T;
+<br>		else {
+<br>			TreeNode *p;
+<br>			p = L-&gt;next;
+<br>			L-&gt;next = NULL;			
+<br>			L-&gt;next = T;
+<br>			T-&gt;next = p;
+<br>		}	
+<br>	}
+<br>	if (T-&gt;rchild)leapLink(T-&gt;rchild, L);
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>20楼-<b>  不会做啊
+</b>:<br>//第十一题
+<br>bool IsTree(Graph &amp;G, int v) {
+<br>	
+<br>	for (int i = 0; i &lt; 5; i++) {//5个节点
+<br>		while (G.v[i]-&gt;next != NULL) {
+<br>			if (G.v[i]-&gt;next-&gt;index == i)//判断是否回来了？
+<br>				return false;
+<br>			else
+<br>				G.v[i] = G.v[i]-&gt;next;
+<br>		}
+<br>	}
+<br>}
+<br>判断二叉树：
+<br>typedef struct VNode {
+<br>
+<br>	int index;
+<br>	struct VNode *next;
+<br>}*VNode;
+<br>typedef struct Graph {
+<br>	VNode v[100];
+<br>	int vernum;
+<br>	int edgenum;
+<br>}Graph;
+<br>int visited[100] = {0};
+<br>bool IsBiTree(Graph &amp;G,int v) {//开始的节点
+<br>	
+<br>	int Vnum = 0;
+<br>	int Enum = 0;
+<br>	DFS(G, v, Vnum, Enum);
+<br>	if (Vnum == G.vernum&amp;&amp;Enum== G.vernum * 2 - 1) {//判断是不是二叉树	
+<br>		return true;
+<br>	}
+<br>	else
+<br>		return false;
+<br>}
+<br>
+<br>void DFS(Graph &amp;G,int v,int &amp;Vnum,int &amp;Enum) {
+<br>	
+<br>	if (visited[v])Vnum++;
+<br>	for (int w = FirstNeighbor(G, v); w &gt; 0; w = NextNeighbor(G, v, w)) {
+<br>		if (!visited[w])
+<br>		{
+<br>			visited[w] = 1;
+<br>			Enum++;
+<br>			DFS(G, w, Vnum, Enum);
+<br>		}
+<br>	}
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>21楼-<b>  啥都不会
+</b>:<br>// 第十九题，请大佬看看是不是哪里还有问题。
+<br>struct node {
+<br>  char data;
+<br>  struct node *lchild;
+<br>  struct node *rchild;
+<br>}
+<br>
+<br>typedef struct node NODE;
+<br>
+<br>void insert(NODE *t, NODE *r)
+<br>{
+<br>  if(t==NULL) retun;
+<br>
+<br>  if(t-&gt;lchild || t-&gt;rchild)
+<br>  {
+<br>    insert(t-&gt;lchild);
+<br>    insert(t-&gt;rchild);
+<br>  }
+<br>  else {
+<br>    NODE * x = (NODE *)malloc(sizeof(NODE));
+<br>    x.data = t.data;
+<br>    r-&gt;next = x;
+<br>    r = x;
+<br>  }
+<br>}
+<br>
+<br>LinkList creatList(LinkList &amp;L)
+<br>{
+<br> NODE *t;
+<br> L = (NODE *)malloc(sizeof(NODE));
+<br> NODE *r = L;
+<br> insert(t,r);
+<br> r-&gt;next = NULL;
+<br> return L;
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>22楼-<b>   啥都不会
+</b>:<br>额，第九题写成了第十九题。21楼请楼主忽略。。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>23楼-<b>  北落师门
+</b>:<br>十一题
+<br>bool isTree(Graph &amp;G){
+<br>    for(i =0; i &lt; G.VexNum; i++)
+<br>        visited[i] = False;
+<br>    int Vnum = 0;
+<br>    int Enum = 0;
+<br>    DFS(G, 1, Vnum, Enum, visited);
+<br>    if(Vnum==G.vexnum&amp;&amp;Enum==2*(G.vexnum-1))
+<br>        return True;
+<br>    else
+<br>        return False;
+<br>}
+<br> 
+<br>void DFS(Graph &amp;G, int v, int &amp;Vnum, int &amp;Enum, int visited[]){
+<br>    visited[v] = True;
+<br>    Vnum++;
+<br>    int w = FirstNeighbor(G,v);
+<br>    while(w！=-1){
+<br>        Enum++;
+<br>        if(!visited[w])
+<br>            DFS(G, w, Vnum, Enum, visited);
+<br>        w = NextNeighbor(G, v, W);
+<br>    }
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>24楼-<b>  学到四点半
+</b>:<br>稀疏矩阵：应该是表头节点5+8+1，数据节点7个，总共24个节点
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>25楼-<b>  学到四点半
+</b>:<br>第九大题
+<br>
+<br>// 采用非递归前序遍历
+<br>BTree * linkLeafNode(BTree *T)
+<br>{  
+<br>    
+<br>    BTree * list = (BTree*)malloc(sizeof(BTree));
+<br>    
+<br>    BTree * p = list;
+<br>    int top = -1;
+<br>    int linking = 0;
+<br>    BTree * s[1000];
+<br>    while (T != NULL || top != -1)
+<br>    {
+<br>        while (T != NULL)
+<br>        {
+<br>            //cout &lt;&lt; T-&gt;data &lt;&lt; endl;
+<br>            if(T-&gt;lchild==NULL &amp;&amp; T-&gt;rchild==NULL){
+<br>                printf("linking %d\n",T-&gt;data);
+<br>                p-&gt;lchild = T;
+<br>                p = p-&gt;lchild;
+<br>                linking = 1;
+<br>            }
+<br>            s[++top] = T;
+<br>            if(linking == 1){
+<br>                T = NULL;
+<br>                linking = 0;
+<br>            } else {
+<br>                T = T-&gt;lchild;
+<br>            }
+<br>        }
+<br>        if (top != -1)
+<br>        {
+<br>            // gettop and pop
+<br>            T = s[top--];
+<br>            T = T-&gt;rchild;
+<br>        }
+<br>    }
+<br>    return list;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>26楼-<b>  四个字节
+</b>:<br>第一题参数个数感觉应该是4 因为 启动程序名也是参数
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>27楼-<b>  即墨拂晓
+</b>:<br>第四题  if(*h-&gt;data - *node-&gt;next-&gt;data &gt; 0)//- -取指符号   取指符号是什么？百度没查到，而且括号里面只有一个 - ，那么不就是判断data域存放的数值大小的比较么？可是题目说的是存放的字符串，字符串不可以直接相减吧？字符串相减不就是两个字符串的地址相减不是没有意义么？求大佬解答一下困惑😂
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>28楼-<b>  双非跨考
+</b>:<br>第二大题
+<br>int bitsSwapRequired(int x,int y)
+<br>{
+<br>
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>29楼-<b>  双非跨考
+</b>:<br>//第二题
+<br>int bitsSwapRequired(int x,int y)
+<br>{//用gcc内建函数应该不算错吧
+<br>return __builtin_popcount(x^y);
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>30楼-<b>  广义表画法
+</b>:<br>广义表是按照蔡的格式画还是严的格式画啊？
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>31楼-<b>  6666
+</b>:<br>没人发现第一题是全角的双引号吗
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>32楼-<b>  ....
+</b>:<br>第四题，只需要交换一下字符串的指针，结点指针不修改
+<br>NODE *sortedLinkedList(NODE *h)
+<br>{
+<br>	NODE *p;
+<br>	char *t;
+<br>	
+<br>	p = h-&gt;next;
+<br>	while (p-&gt;next != NULL) {
+<br>		while (strcmp(p-&gt;data, p-&gt;next-&gt;data) &lt; 0)
+<br>			p = p-&gt;next;
+<br>		
+<br>		t = p-&gt;next-&gt;data;
+<br>		p-&gt;next-&gt;data = p-&gt;data;
+<br>		p-&gt;data = t;
+<br>			
+<br>		p = p-&gt;next; 
+<br>	}
+<br>	
+<br>	return h;
+<br>} 
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>33楼-<b>  辽宁工程技术大学
+</b>:<br>怎么第九题版本这么多，你们看的是哪版数据结构？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>34楼-<b>  学到四点半
+</b>:<br>// 对链表进行排序，冒泡排序
+<br>void SortLinkListByBub(){
+<br>    int data[10];
+<br>    int m = 0;
+<br>    srand(time(NULL));
+<br>    for(m=0;m&lt;10;m++){
+<br>         data[m] = rand()%(rand()0)+1;
+<br>    }
+<br>    LNode * list = createWithoutHead(data,10);
+<br>    printList(list);
+<br>    LNode *i = list,*move = list;
+<br>    LNode *j,*pre;
+<br>    int temp;
+<br>    while(move-&gt;next!=NULL){
+<br>        pre = i;
+<br>        j = i-&gt;next;
+<br>        while(j!=NULL){
+<br>            if(pre-&gt;data &gt; j-&gt;data){
+<br>                // swap
+<br>                temp = pre-&gt;data;
+<br>                pre-&gt;data = j-&gt;data;
+<br>                j-&gt;data = temp;
+<br>            }
+<br>            pre = j;
+<br>            j = j-&gt;next;
+<br>
+<br>        }
+<br>        move = move-&gt;next;
+<br>        printList(list);
+<br>    }
+<br>    printList(list);
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>35楼-<b>  经验同学
+</b>:<br>第十一题类似于拓扑排序，对于树的判断即是否有回路，有回路则不是树。
+<br>在图的邻接表表示中，首先统计每个顶点的度，然后重复寻找一个度为1的顶点，将度为1和0的顶点从图中删除，并将与该顶点相关联的顶点的度减1，然后继续反复寻找度为1的，在寻找过程中若出现若干顶点的度都为2，没有度为1的顶点了，则这些顶点组成了一个回路；否则，图中不存在回路。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>36楼-<b>  上师大最弱的
+</b>:<br>24楼，你5+8+1+7怎么得到24的，是我忽略什么了吗
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>37楼-<b>  旧庐杜门
+</b>:<br>24楼和36楼，我认为是5+8+1+7为21，应该是24楼计算错误
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>38楼-<b>  旧庐杜门
+</b>:<br>/*
+<br>	Name: 将叶子节点转为带有表头结点的单链表 
+<br>	Copyright: 
+<br>	Author: lingr7
+<br>	Date: 14/12/18 18:57
+<br>	Description: 采用层序遍历，先将叶子节点存入一个数组中，再将其改造成单链表 
+<br>*/
+<br>struct TreeNode{
+<br>	char data;
+<br>	struct TreeNode *lchild;
+<br>	struct TreeNode *rchild;
+<br>};
+<br>typedef struct TreeNode Node;
+<br>Node *Find(Node *t)
+<br>{
+<br>	int head,tail,i,j;
+<br>	Node *q[100], *leaves[100], *p;
+<br>	i = 0;
+<br>	head = 0;
+<br>	tail = 1;
+<br>	q[head] = t;
+<br>	while(head &lt; tail)
+<br>	{
+<br>		p = q[head++];
+<br>		if(p-&gt;lchild != NULL)
+<br>			q[tail++] = p-&gt;lchild;
+<br>		if(p-&gt;rchild != NULL)
+<br>			q[tail++] = p-&gt;rchild;
+<br>		if(p-&gt;lchild == NULL &amp;&amp; p-&gt;lchild == NULL)
+<br>			leaves[i++] = p;
+<br>	}	
+<br>	while(--i){
+<br>		leaves[i-1]-&gt;rchild = leaves[i];
+<br>	}
+<br>	Node *LeafHead;
+<br>	LeafHead = (Node*)malloc(sizeof(Node));
+<br>	LeafHead =leaves[0];
+<br>	return LeadHead; 
+<br>} 
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>39楼-<b>  旧庐杜门
+</b>:<br>根据35楼的思路写成代码
+<br>/*
+<br>	Name: 判断无向图是否有环 
+<br>	Copyright: 
+<br>	Author: lingr7
+<br>	Date: 15/12/18 10:34
+<br>	Description: 借用拓扑序列思想 ，如果i==n那么该无向图中无环 
+<br>	不断寻找度为1的结点 
+<br>*/
+<br>struct CH_NODE{
+<br>	int count;
+<br>	struct CH_NODE *head;
+<br>};
+<br>struct VL_NODE{
+<br>	int ver;
+<br>	struct VL_NODE *link;
+<br>};
+<br>CH_NODE ch[6];/*下标1-5记录5个顶点的头指针*/
+<br>int tpv[100];/*记录输出顶点*/
+<br>int topol_order(CH_NODE ch[5], int n, int tpv[]){
+<br>	int i, j, k, head, tail;
+<br>	VL_NODE *t;
+<br>	head = -1;
+<br>	tail = -1;
+<br>	int queue[100];/*队列*/
+<br>	for(i = 1; i &lt;= n; i++){
+<br>		if(ch[i].count == 1)
+<br>			queue[++tail] = i;/*度为1的顶点入队*/
+<br>	}
+<br>	i = 0;
+<br>	while(head &lt; tail)/*队列不空*/{
+<br>		j = queue[++head];/*出队*/
+<br>		tpv[i++] = j;
+<br>		t = ch[j].head;
+<br>		while(t != NULL){
+<br>			k = t-&gt;ver;
+<br>			if(--(ch[k].count) == 1)
+<br>				queue[++tail] = k; 
+<br>			t = t-&gt;link;
+<br>		} 
+<br>	}
+<br>	return i;/*i记录了曾经入队的顶点数目*/
+<br>} 
+<br> 
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>40楼-<b>  小小小可爱~(@^_^@)~
+</b>:<br>第十一题代码，另一种思路
+<br>
+<br>boolean IsTree_al(ALGraph *G)
+<br>{
+<br>    int edgenum = 0,i,k;
+<br>    EdgeNode *p;
+<br>    for(i = 0;i &lt; G-&gt;vexnum;i++)
+<br>    {
+<br>        k = 0;
+<br>        for(p = G-&gt;vertices[i].first;p;p=p-&gt;next)
+<br>        {
+<br>            k++;
+<br>        }
+<br>        if(k != 0)
+<br>        {
+<br>            edgenum += k;
+<br>            visited[i] = 1;
+<br>        }
+<br>    }
+<br>    edgenum /= 2;//无向图，边双向存储，需取一半；
+<br>    if(edgenum != G-&gt;vexnum - 1) return false;
+<br>    for(i = 0;i &lt; G-&gt;vexnum &amp;&amp; visited[i] == 1;i++);
+<br>    if(i &lt; G-&gt;vexnum) return false;
+<br>    return true;
+<br>}
+<br>
+<br><br></p>            </div>
+        </div>
+
+</div>
+
+<script src="./2016年试题_files/bgcolor.js"></script>
+  <script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</body></html>

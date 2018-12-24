@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2010/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2010年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2010年答案_files/ansv3.css">
+  <script src="./2010年答案_files/cmt.js"></script>
+  <script src="./2010年答案_files/jquery.min.js"></script>
+  <script src="./2010年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2010年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2010年答案_files/font-awesome.css">
+
+<title>2010年答案</title>
+
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2010/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+
+<a href="http://www.malic.xyz/ans839/2010/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2010/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2010/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+    <ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+   <div id="contents">
+
+<a id="pc01"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(247, 223, 199);">
+			<p>
+第一题<br>
+1.结构体变量的大小一定等于所有结构体成员的类型大小之和吗?为什么?<br>
+2.void*类型表示什么?举一个使用该类型的例子
+			</p>
+		</div>
+		<p>
+1.不一定，结构体在内存中会对齐，且对齐的偏移量通常是字节的整数倍，以达到更好的性能<br>
+2.void *表示空指针，可强制转换为任一类型，如 memcpy(void *src, void *dest)的形参src即为空指针
+		</p>
+	</div>
+
+<a id="pc02"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(223, 255, 199);">
+			<p>
+第二题<br>
+读程序写结果
+			</p>
+		</div>
+		<p>
+-6784 -24 1 0 13 24 45 456 6784 3 54 -19 11 11 3 53<br>
+6784 456 54 53 45 24 13 11 11 3 3 1 0 -19 -24 -6784<br>
+0 1 3 3 11 11 13 24 45 53 54 -19 -24 456 6784 -6784 <br>
+		</p>
+	</div>
+
+<a id="pc03"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(207, 215, 247);">
+			<p>
+三、写函数定义
+1.函数ui2hex将unsigned整数n转换成十六进制形式的字符串n，并返回指向该字符串的指针<br>
+本题不能使用sprintf()<br>
+函数原型为char* ui2hex(unsigend n,char *s);<br>
+2.定义一个函数将矩阵a（包含n行n列）转置<br>
+函数原型: void matrixInvert(int **a,int n);<br>
+			</p>
+		</div>
+<p>1.</p>
+<pre><font color="#47BF7F">char</font>* ui2hex(<font color="#47BF7F">unsigned</font> n, <font color="#47BF7F">char</font> *s)
+{
+        <font color="#47BF7F">int</font> i=<font color="#CD950C">0</font>,tmp,N;
+        <font color="#CD950C">while</font>(n&gt;<font color="#CD950C">0</font>)
+        {
+                tmp=n%<font color="#CD950C">16</font>;
+                <font color="#CD950C">if</font>(tmp&lt;<font color="#CD950C">10</font>)
+                        s[i]=tmp+<font color="#CD950C">'0'</font>;
+                <font color="#CD950C">else</font>
+                        s[i]=tmp-<font color="#CD950C">10</font>+<font color="#CD950C">'A'</font>;
+                n/=<font color="#CD950C">16</font>;
+                i+=<font color="#CD950C">1</font>;
+        }
+        s[i]=<font color="#CD950C">0</font>;
+        N=i;
+        <font color="#CD950C">for</font>(i=<font color="#CD950C">0</font>;i&lt;N/<font color="#CD950C">2</font>;i++)
+        {
+                tmp=s[i];
+                s[i]=s[N-i-<font color="#CD950C">1</font>];
+                s[N-i-<font color="#CD950C">1</font>]=tmp;
+        }
+
+        <font color="#CD950C">return</font> s;
+}
+</pre>
+<br>
+<div style="background-color:#F7F;width:100%;height:1px;overflow:hidden;">
+</div>
+
+2.
+<p><a href="http://www.malic.xyz/ans839/2010/p3_02.txt" target="_blank">查看完整程序</a></p>
+		<pre><code>
+void matrixInvert(int **a, int n)
+{
+    int tmp;
+    for (int i=0; i&lt;n; i++)
+    {
+        for (int j=i; j&lt;n; j++)
+        {
+            tmp = *((int *)a+i*n+j);
+            *((int *)a+i*n+j) = *((int *)a+j*n+i);
+            *((int *)a+j*n+i) = tmp;
+        }
+    }
+}
+</code>
+		</pre>
+	</div>
+
+<a id="pc04"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(215, 255, 247);">
+			<p>
+四、按要求写程序
+1.一个文件中保存了最多10000个学生的相关信息（学号、姓名、成绩），为了进行抽样分析，用随机数产生函数随机选取其中1%学生的信息，按照学号的升序排序，将排序后的学生信息存入另一个文件当中。输入输出文件名均由命令行指定<br>
+2.数组a中有n个字符元素,输出m(m&lt;=n)个元素组成的所有组合。<br>
+例如n=3,m=2,a[0]='a',a[1]='b',a[2]=1时，输出为ab a1 b1<br>
+写程序输入n,m及a，输出所有组合<br>
+			</p>
+		</div>
+		<p>第1题是个抽样问题，直接想法是直接打随机数，直到打出N/100个不重复的随机数为止。<br>此题从N个数中打1%个随机数,重复命中率还可能不高，但如果是从100个里抽90个，假设已经打出89个不重复的随机数，要再从100个数里生成随机数恰好在剩下未出现的的11个数里的概率就比较低，可能要浪费的多次生成随机数的时间。最好是能使得随机数在剩余的范围内生成。<br>下边的抽样是从《编程珠玑》第12章学到的，是一种符合概率的抽样：<br>从N个元素中抽取M个样本，抽取第1个样本的概率是M/N，而抽第2个的概率则有些不同：在选出第1个样本的情况下要以(M-1)/(N-1)的概率抽第2个样本，未选出第1个样本时则以M/(N-1)的概率抽选第2个样本。 <br>一般来说，若从r个剩余整数中选出s个，会以s/r的概率选择下一个数。<br>具体代码看程序</p>
+		<pre><code>
+#include &lt;time.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+#define MAXN 10000
+#define MAXLENGTH 20
+struct stuNode
+{
+    char ID[MAXLENGTH];
+    char name[MAXLENGTH];
+    int score;
+};
+typedef struct stuNode stuType;
+
+int cmp(const void*a,const void *b)
+{
+    stuType m=*(stuType*)a,n=*(stuType*)b;
+    return atoi(m.ID)-atoi(n.ID);
+}
+
+int main(int argc,char* argv[])
+{
+
+    stuType stu[MAXN];
+    int N,M,i=0;
+    int index=0,remaining=M;
+    FILE *fin,*fout;
+    stuType selectedStu[MAXN/100];
+    int selectedList[MAXN/100];
+    
+    fin=fopen(argv[1],"r");
+    while(fscanf(fin,"%s",stu[i].ID)!=EOF)
+    {
+        fscanf(fin,"%s",stu[i].name);
+        fscanf(fin,"%d",&amp;stu[i].score);
+        i++;
+    }
+    fclose(fin);
+    N=i;
+    M=N/100;
+    remaining=M;
+    srand(time(NULL));
+    for(i=0;i&lt;N;i++)
+    {
+        if(rand()%(N-i)&lt;remaining)
+        {
+            selectedList[index++]=i;
+            remaining--;
+        }
+    }
+    for(i=0;i&lt;M;i++)
+    {
+        selectedStu[i]=selectedStu[selectedList[i]];
+    }
+    qsort(selectedStu,M,sizeof(selectedStu[0]),cmp);
+    
+    fout=fopen(argv[2],"w");
+    for(i=0;i&lt;M;i++)
+    {
+        fprintf(fout,"%s %s %d\n",selectedStu[i].ID,selectedStu[i].name,selectedStu[i].score);
+    }
+    fclose(fout);
+
+    return 0;
+}
+</code>
+</pre>
+<div style="background-color:#F7F;width:100%;height:1px;overflow:hidden;">
+</div>
+<p>(2)</p>
+<pre><code>
+#include &lt;stdio.h&gt;
+#define MAXN 20
+int index[MAXN];
+char a[MAXN];
+
+void solve(int n,int m,int level)
+{
+   int i;
+   if(m==level){
+	for(i=0;i&lt;m;i++) printf("%c ",a[index[i]]);
+	printf("\n"); 
+	}
+   else{
+	for(i=index[level-1]+1;i&lt;n;i++){
+	   index[level]=i;
+	   solve(n,m,level+1);
+	}
+   }
+}
+
+int main()
+{
+   int i,n,m;
+	
+   scanf("%d%d",&amp;n,&amp;m);
+   scanf("%s",a);
+   for(i=0;i&lt;n;i++){
+	index[0]=i;
+	solve(n,m,1);
+   }
+   return 0;
+}
+</code>
+		</pre>
+
+<p>本题的程序代码是所有元素均不相同的组合情况。如果要求从N个数中选M个数输出组合，M与N均是已知，那么写M重循环进行遍历就可以。但现在循环重数M不能预先知道，这种循环就不能实现。这时可以使用用递归，每次递归调用进行一重循环，直到循环层数达到要求，再输出结果。
+</p>
+	</div>
+<a id="pc05"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(239, 255, 215);">
+			<p>
+一、已知环形队列q[3]的头指针和尾指针分别为head和tail，请写出判断此队列队空和队满的条件，并举例画图简要说明这些条件
+			</p>
+		</div>
+		<p>
+判断循环队列空:(head+1)%3 == tail<br>
+判断队空写head==tail也可<br>
+判断循环队列满:(tail+1)%3 == head<br>
+…
+		</p>
+	</div>
+<a id="pc06"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(199, 247, 215);">
+			<p>
+二、填空完成，strins(s1,i,s2)函数，此函数功能是把串s2加到串s1的i的位置上，其中strlen()为求串长的函数
+			</p>
+		</div>
+		<pre>(1) &gt;
+(2) &gt;
+(3) &gt;=
+(4) k+n
+(5) i+k
+		</pre>
+	</div>
+<a id="pc07"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(231, 255, 239);">
+			<p>
+三、已知线性表(10,2,12,5,7)，写出分别用合并排序和选择排序每一趟的排序结果
+			</p>
+		</div>
+		<pre>合并排序:
+(10, 2, 12, 5, 7)
+([2, 10], [5, 12], [7])
+([2, 5, 10, 12], [7])
+(2, 5, 7, 10, 12)
+
+选择排序:
+(10, 2, 12, 5, 7)
+({2}, 10, 12, 5, 7)
+({2, 5}, 12, 10, 7)
+({2, 5, 7}, 10, 12)
+(2, 5, 7, 10, 12)
+		<pre>	</pre></pre></div>
+    <a id="pc08"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(231, 239, 255);">
+			<p>
+四、推导三维数组b[2][4][7]的地址公式（假设每个元素占s个存储单元）
+			</p>
+		</div>
+		<p>
+&amp;b[i][j][k]=(28*i+7*j+k)*s
+		</p>
+	</div>
+
+
+<a id="pc09"></a><br>
+<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(215, 239, 215);">
+			<p>
+五、已知一个稀疏A，画出它的三元组存储结构
+			</p>
+		</div>
+		<pre>-----------
+ i  j  e(element)
+-----------
+ 1  4  5
+ 2  4  2
+ 3  2  3
+ 4  4  6
+-----------
+//三元组行标和列标从1开始计数？数据结构P98
+		</pre>
+	</div>
+<a id="pc10"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(207, 231, 231);">
+			<p>
+六、已知一棵二叉树T的中序遍历是B,D,E,C,F,G，前序遍历，B,D,C,E,F,G。画出求T的整个过程
+			</p>
+		</div>
+		<pre>中序: B, D, E, C, F, G
+前序: D, B, C, E, F, G
+
+划分:
+{B}, D, {E, C, F, G}
+{B}, D, {{E}, C, {F, G}}
+{B}, D, {{E}, C, {F, G}}
+<code>
+  D
+ / \
+B   C
+   / \
+  E   F
+       \
+        G
+      </code>
+		</pre>
+	</div>
+
+
+<a id="pc11"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(207, 255, 207);">
+			<p>
+七、已知G是一个非连通的无向图，它有27条边，请分析出该图最少有多少个顶点，并简要说明此图是什么样的图
+			</p>
+		</div>
+		<p>
+有27条边的连通图可以最少有8个顶点，而题目要求为非连通图，所以应有一个单独的顶点不与之前8个顶点有边相连，故应至少有9个顶点
+		</p>
+	</div>
+
+<a id="pc12"></a><br>
+	<div class="subAns">
+		<div class="qtitle" style="background-color: rgb(199, 247, 231);">
+			<p>
+八、已知无向图G存在于邻接表中（表头数组head[10]），邻接表每个结点有2个域(ver和link),现在对G进行深度优先搜索，出发顶点为u，visit为一维数组，visit[i]记录顶点i是否被访问过，填空完成深搜dfs(u)
+			</p>
+		</div>
+		<pre>1.1
+2.head[u]
+3.0
+4.t-&gt;ver
+5.t-&gt;link
+		</pre>
+	</div>
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  学到四点
+</b>:<br>m+k 错了吧，应该是 i+k
+<br></p><p style="font-size:80%">#<span style="color:#55F;"><b>malic</b></span>:已更正</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  学到四点
+</b>:<br>循环队列哪里写反了吧
+<br>
+<br></p><p class="rep">#<span class="rep">malic</span>:确实是写反了，已修改</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  昵称比楼主JJ长
+</b>:<br>第一题第二问 void *表示空指针 
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  昵称比楼主JJ长 
+</b>:<br>c 的第二题 第三个序列0 1 3 3 11 11 13 24 45 53 54 -19 -24 456 6784 -6784 已更改为
+<br>0 1 3 3 -19 -24 11 11  13 24 45 53 54 456 -6784 6784
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  昵称比楼主JJ长
+</b>:<br>strcmp("11", ""-19) == 1;
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  万古星空悬皓月
+</b>:<br>head == tail 对空
+<br>(tail + 1)%3 == head 队满
+<br></p><p class="rep">#<span class="rep">malic</span>:好，已更正</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  窗户不干净
+</b>:<br>数据结构第八题第二空应该是head[u]
+<br></p><p class="rep">#<span class="rep">malic</span>:蔡子经书上同样能找到这段，也包括第1和3,写true和false也不对，按C语言写成1与0</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  窗户不干净
+</b>:<br>char *ui2hex(unsigned n,char *s)                                        
+<br>  {
+<br>      int i = 0,k,top = 0;
+<br>      int stack[100];
+<br>      while(n &gt; 0)
+<br>      {
+<br>          stack[++top] = n;
+<br>          n = n/16;
+<br>      }
+<br>      while(top)
+<br>      {   
+<br>          k = stack[top--];
+<br>          if(k &gt;= 0 &amp;&amp;  k &lt;= 9)
+<br>              s[i] = '0'+k;
+<br>          else if(k &gt;= 10 &amp;&amp; k &lt;= 15)
+<br>              s[i] = 'A'+k-10; 
+<br>          i++;     
+<br>      }   
+<br>      return s;
+<br>  }    
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  ....
+</b>:<br>第三大题第1题
+<br>s[i]='\0';
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  。。。。
+</b>:<br>第三大题第2题
+<br>访问下三角阵中除对角元素外，
+<br>void matrixInvert(int ** a, int n)
+<br>{
+<br>    int i, t;
+<br>    for( i=1; i&lt;n; i++)
+<br>        for( j=0; j &lt; i; j++) {
+<br>            t=*(*(a+i)+j);
+<br>            *(*(a+i)+j) = *(*(a+j)+i);
+<br>            *(*( a+j)+i) = t;
+<br>        }
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  面向世界
+</b>:<br>第三大题第一小题  用位运算
+<br>char *ui2hex(unsigned n,char *s)
+<br>{
+<br>	unsigned int mask = 0xF&lt;&lt;28;//1111 0000 0000 0000
+<br>	unsigned temp;
+<br>	int flag = 0;
+<br>	char *p = s;
+<br>	char info[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+<br>	if(n == 0)//如果本来就是0，则直接把s设置为0并返回
+<br>	{
+<br>		s[0] = '0';
+<br>		s[1] = '\0';
+<br>		return s;
+<br>	}
+<br>	for(;mask;mask&gt;&gt;=4)//从左到右，每次读取四位，判断是否大于0
+<br>	{
+<br>		temp = mask&amp;n;
+<br>		while(temp &gt; 15)//去掉多余的0  如取到的是 1001 0000  则需要去掉后面这四个0
+<br>			temp&gt;&gt;=4;
+<br>		if(flag || temp)//如果已经是碰到一个非0了，那不管是什么都存进去
+<br>		{
+<br>			flag = 1;
+<br>			*p++ = info[temp];	
+<br>		}
+<br>	}
+<br>	*p = '\0';
+<br>	return s;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  双非跨考
+</b>:<br>代码填空strins那个，仔细看一下蔡子经上的代码，会发现第二个空那里应该是&gt;=，其实书上这里是&gt;，不过书上这里错了。假设字符数组长度是MAXN，s1和s2长度加起来正好是MAXN，那么第一个for循环第一次执行时访问的是s1[MAXN]，额，好像这里就数组越界访问了吧。。。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  经验同学
+</b>:<br>第八题可不可以这样:
+<br>dfs（u）
+<br>{int *t;
+<br>if（！visit【u】）//没被访问时进行以下操作
+<br>{t=head【u】.link;
+<br>while(t!=null)//当它还有link项时
+<br>{
+<br>visit【t-&gt;ver】=1;
+<br>dfs(t-&gt;ver);
+<br>t=t-&gt;link;
+<br>}
+<br>}
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  田螺……
+</b>:<br>数据结构的第四题不对
+<br>答案=＆b【0】【0】【0】+（28*I +7*j+k）*s
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  旧庐杜门
+</b>:<br>第二大题，为使编译通过，编程成功，对cmp函数进行订正。
+<br>int compare1(const void *a, const void *b)
+<br>{
+<br>	return atoi(*(char(*)[80])b) - atoi(*(char(*)[80])a);/*这里将b转换为一个指向字符数组的指针，该字符数组有80个元素*/
+<br>}
+<br>int compare2(const void *a, const void *b)
+<br>{
+<br>	//char (*x)[80] = a, (*y)[80] = b;
+<br>	char *x = *(char(*)[80])a;
+<br>	char *y = *(char(*)[80])b;
+<br>	int diff = strlen(x) - strlen(y);
+<br>	return diff ? diff : strcmp(x, y);
+<br>}
+<br>另外，4楼的更改是不对的，应该保持原答案。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  旧庐杜门
+</b>:<br>赞同12楼对于第二题的看法，第二个空应该是&gt;=，因为，字符数组20的空间，要留给‘\0’一个，所以，两字符串的长度，最多是19
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  kkkk
+</b>:<br>第二题程序阅读题，第三趟排序，-24是不是应该在-19的前面呢?
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>18楼-<b>  空白缥缈
+</b>:<br>第四题个数应该加上1吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>19楼-<b>  hhgg
+</b>:<br>我觉得四楼所得对。负号的ascll码值比数字小
+<br><br></p>            </div>
+        </div>
+<!--
+<img style="width:60%;padding:120px;" src="../denote.png"/>
+-->
+    </div>
+
+<script src="./2010年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+    
+
+
+</body></html>

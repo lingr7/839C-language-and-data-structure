@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2018/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2018年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2018年答案_files/ansv3.css">
+  <script src="./2018年答案_files/cmt.js"></script>
+  <script src="./2018年答案_files/jquery.min.js"></script>
+  <script src="./2018年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2018年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2018年答案_files/font-awesome.css">
+
+	<title>2018年答案</title>
+   <style>
+
+</style>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+<div id="denote" class="reveal-modal" data-reveal="">
+  <h2>打赏</h2>
+  <p></p>
+  <div style="width:50%;margin:0 auto;">
+  <img src="./2018年答案_files/denote.png">
+  </div>
+  <a class="close-reveal-modal">×</a>
+</div>
+
+<div id="floatNavi">
+<div id="toTop"><a href="http://www.malic.xyz/ans839/2018/#top"><i class="fa fa-angle-double-up fa-2x"></i></a></div>
+<div id="toBottom"><a onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('#toTop').click(function(){
+        jQuery('html,body').animate({scrollTop:0},'slow');
+            return false;
+    });
+
+    $('#toBottom').click(function(){
+        jQuery('html,body').animate({scrollTop:jQuery(document).height()},'slow');
+            return false;
+    });
+});
+</script>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2018/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2018/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+<ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+   <div id="contents">
+<a id="pc01"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(215, 239, 255);">
+
+    <p>第一题<br>1.举例说明表达式的值不确定的情况<br>2.结构体的大小是否等于各结构成员之和</p>
+    </div>
+    <div class="res">
+        
+    <p>
+        1.表达式的值和计算次序不确定，就是指复合求值的时候，C语言标准未明确规定计算次序可能导致的不同平台不同编译器下运算得到的结果不同，例如k=(k++)+(k--)，这是一个合法的表达式，但k的值取决于自增自减运算次序和加法的先后。
+        以下摘自 &lt;Pointers on C&gt;P83
+        <img src="./2018年答案_files/p1.png" style="margin:0 5%;width:80%;"><br>
+        <br>
+        2.结构体的大小并不总等于所有结构体成员之和，例如一个结构体中有char类型与double类型的成员，那么结构体的大小是2*sizeof(double)，而不是sizeof(char)+sizeof(double)，这是为了寻址方便而这样规定的。
+    </p>
+    </div>
+       
+</div>
+<br>
+ <div class="subAns">
+ <a id="pc02"></a>
+ <div class="qtitle" style="background-color: rgb(231, 247, 223);">
+ <p>第2题</p>
+ <p>定义函数getBits(int x int p int n)，返回值是整数x的从第p位起向低位数的共n位。例如getBits(x,4,3)返回x的第4位，第3位和第2位</p>
+</div>
+        <p>
+            K&amp;R上的原题，第39页。但所谓“位”，看函数名是Bits，要想到这是返回一个二进制位，而不是十进制位。
+        </p>
+        <img src="./2018年答案_files/p2.png" style="margin:0 5%;width:80%;"><br>
+          </div>
+        <a id="pc03">        </a>
+        <br>
+  <div class="subAns">
+            <div class="qtitle" style="background-color: rgb(223, 207, 223);">
+       <p>     	第三题，设计一个函数sort()用于排序，要求数据元素个数，数组中元素的类型和排序标准都要由函数参数来指定。排序算法自定。
+          </p>  </div>
+        <pre><code>
+           
+void swap(const void* a, const void* b, int size)
+{
+    assert(a != NULL &amp;&amp; b != NULL);
+    char tmp = 0;
+    int i = 0;
+    while (size &gt; 0) {
+        tmp = *((char*)a + i);
+        *((char*)a + i) = *((char*)b + i);
+        *((char*)b + i) = tmp;
+        ++i;
+        --size;
+    }
+}
+
+void Qsort(void* base, int left, int right, int size, int (*cmp)(const void* a, const void* b))
+{
+    assert(base != NULL &amp;&amp; size &gt;= 1 &amp;&amp; cmp != NULL);    /* left may be &lt; 0 because of the last - 1 */
+    if (left &gt;= right) return;
+    char* pleft = (char*)base + left * size;
+    char* pkey = (char*)base + (left + (right - left) / 2) * size;
+    swap(pleft, pkey, size);
+    int last = left;
+    char* plast = (char*)base + last * size;
+    for (int i = left + 1; i &lt;= right; ++i) {
+        char* pi = (char*)base + i * size;
+        if (cmp(pi, pleft) &lt; 0) {
+            ++last;
+            plast = (char*)base + last * size;
+            swap(pi, plast, size);
+        }
+    }
+    swap(pleft, plast, size);
+    Qsort(base, left, last - 1, size, cmp);
+    Qsort(base, last + 1, right, size, cmp);
+}
+
+       </code> </pre>
+</div>
+<a id="pc04"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(231, 223, 207);">
+	<p>第四题，请你设计函数cubeRoot(x),返回值为x的立方根，算法自定，但请尽可能使算法复杂度低</p>
+</div>
+        <p>
+            简单的数学计算类问题，求x的立方根，也就是求关于t的方程t<sup>3</sup>=x的解，也可看作求f(t)=t<sup>3</sup>-k的零点
+            <br>
+            函数零点的近似解可以用二分法，也可以用牛顿切线法，都是基础数学的知识。</p>
+            <pre><code>
+double cubeRoot(double x) 
+{ 
+    double lwbd=0,upbd=x,mid; 
+    double epsilon=1e-5;
+    if(x&lt;1) 
+        upbd=1; // root is in the range [lwbd,upbd] 
+    while(upbd-lwbd&gt;epsilon)
+    { 
+        mid=lwbd+(upbd-lwbd)/2; 
+        if(mid*mid*mid-x&lt;0) 
+            lwbd=mid; 
+        else 
+            upbd=mid;
+    } 
+    return mid; 
+}
+         </code>   </pre>
+            <p>
+                切线法，要知道牛顿切线公式<br><img src="./2018年答案_files/gif.latex">
+            
+            </p><pre><code>
+double cubeRoot(double x) 
+{ 
+    double yn=1,yp=x; double epsilon = 1e-5; 
+    while(1)
+    { 
+        yn=yp-(yp*yp*yp-x)/(3*yp*yp); 
+        if(fabs(yp-yn)&lt;epsilon) 
+            break; 
+        yp=yn;
+    } 
+    return yn; 
+}
+     </code>       </pre>
+        <p></p>
+</div>
+        <a id="pc05">
+        </a>
+<br>
+  <div class="subAns">
+<div class="qtitle" style="background-color: rgb(247, 255, 223);">
+<p>两个班的成绩分别存放在两个班的成绩分别存放在两个文件当中。 每个文件有多行， 每行都是由空格分隔的学号、姓名和成绩。现在要将两个班的成绩合并到一起进行排序按照成绩从高到低，如果相同则按学号由小到大排序。将结果输出一个文件当中。两个输入文件名与输出文件名使用命令行参数指定。
+<br>请你编写一个程序完成上述功能</p>
+</div>
+        <p>
+            主要考查的是结构体排序和命令行参数的用法
+        </p>
+        <pre>        	<code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+#define MAXN 200
+struct stuNode
+{
+    char stuID[20];
+    char name[20];
+    int score;
+};
+typedef struct stuNode stuType;
+
+
+int myCompare(stuType m,stuType n)
+{
+    if(m.score!=n.score)
+        return n.score-m.score;
+    else
+        return strcmp(m.stuID,n.stuID);
+}
+
+int cmp(const void *a,const void *b)
+{
+    stuType m=*(stuType*)a, n=*(stuType*)b;
+    return myCompare(m,n);
+}
+
+void loadData(FILE* fp,stuType *m)
+{
+    int i=0;
+    while(fscanf(fp,"%s",m[i].stuID)!=EOF)
+    {
+        fscanf(fp,"%s%d",m[i].name,&amp;m[i].score);
+        i++;
+    }
+    qsort(m,i,sizeof(stuType),cmp);
+    m[i].score=-1; // set -1 as bounder
+}
+
+void merge(stuType *a,stuType *b)
+{
+    stuType tmp[MAXN];
+    int i=0,j=0,index=0;
+    while(a[i].score&gt;0 &amp;&amp; b[j].score&gt;0)
+    {
+        if(myCompare(a[i],b[j])&lt;0)
+            tmp[index++]=a[i++];
+        else
+            tmp[index++]=b[j++];
+    }
+    while(a[i].score&gt;0)
+        tmp[index++]=a[i++];
+    while(a[i].score&gt;0)
+        tmp[index++]=b[j++];
+    tmp[index].score=-1;
+    for(i=0;i&lt;index;i++)
+        a[i]=tmp[i];
+}
+
+int main(int argc,char* argv[])
+{
+    stuType a[MAXN],b[MAXN];
+    FILE *fin1,*fin2,*fout;
+    int i;
+    fin1=fopen(argv[1],"r");
+    fin2=fopen(argv[2],"r");
+    fout=fopen(argv[3],"w");
+
+    loadData(fin1,a);
+    loadData(fin2,b);
+
+    merge(a,b);
+    for(i=0;a[i].score&gt;0;i++)
+    {
+        fprintf(fout,"%s %s %d\n",a[i].stuID,a[i].name,a[i].score);
+    }
+
+    return 0;
+}
+</code>
+        </pre>
+</div>
+        <a id="pc06"></a>
+<br>
+  <div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 199, 255);">
+	<p>第六题，数组A[N]中的元素为整数类型，请你设计一个较快的算法将其分为左右两部分，使左边均为奇数而右边均为偶数。</p>
+</div>
+        <p>你应该对快速排序很熟悉，每趟快速排序会将数组分成左右两部分，左边小于pivot值，右边大于pivot。此题思想与之相似，可以左右两边同时遍历，从左边读到偶数，再从右边读到奇数时，就交换两个读到的数值</p>
+        <pre><code>
+void classifier(int *a,int N)
+{
+    int i=0,j=N-1,tmp;
+    while(i&lt;j)
+    {
+        while(i&lt;j &amp;&amp; a[i]%2==1)
+            i++;
+        while(i&lt;j &amp;&amp; a[j]%2==0)
+            j--;
+        if(i&lt;j)
+        {
+            tmp=a[i];
+            a[i]=a[j];
+            a[j]=tmp;
+        }
+    }
+}
+</code>
+        </pre>
+    </div>
+        <a id="pc07"></a>
+    <br>
+  <div class="subAns">
+<div class="qtitle" style="background-color: rgb(223, 223, 231);">
+	<p>第七题，填空，使两个有序链表合并为一个有序链表</p>
+</div>
+<p>此题是1994年清华大学考研的第五题原题</p>
+<br>
+<img src="./2018年答案_files/p7.png" style="width:600px;">
+        <pre><code>
+(1) IF pa=NIL THEN return(true);
+(2) pb &lt;&gt; NIL AND pa^.data&gt;=pb^.data
+(3) return (inclusion(pa,pb)
+(4) pb:=pb^.next
+(5) return(false)
+  </code>      </pre>
+    </div>
+            <a id="pc08">  </a>
+    <br>
+      <div class="subAns">
+
+<div class="qtitle" style="background-color: rgb(199, 255, 255);">
+<p>第八题，在一棵二叉树（ 链式存储结构）中查找值为x的结点，请设计一个函数，用于输出值为x的结点的所有祖先。 假设值为x的结点只有1个。 先简要地写出算法的思路和与主要步骤，再写完整的函数，在函数中的主要语句应当有注释。
+</p>
+</div>
+<pre><code>
+int ancestor(BTNode *b,ElemType x)
+{
+    if (b==NULL)
+    else if ((b-&gt;lchild!=NULL &amp;&amp; b-&gt;lchild-&gt;data==x) 
+            || (b-&gt;rchild!=NULL &amp;&amp; b-&gt;rchild-&gt;data==x))
+    {
+        printf("%c ",b-&gt;data);
+        return 1;
+    }
+    else if (ancestor(b-&gt;lchild,x) || ancestor(b-&gt;rchild,x))
+    {
+        printf("%c ",b-&gt;data);
+        return 1;
+    }
+    else
+        return 0;
+}
+</code>
+</pre>
+    </div>
+    <a id="pc09"> </a>
+    <br>
+   <div class="subAns">
+        <div class="qtitle" style="background-color: rgb(247, 231, 255);">
+        	<p>第九题，填写下列Prim算法的空白。</p>
+
+
+    </div>
+<pre>填空题，代码从略
+</pre>
+</div>
+
+
+<!--
+<img style="width:50%;padding:130px;" src="../denote.png"/>
+-->
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  <span style="color:#11F">malic</span>
+</b>:<br>大家好，加了个讨论区，大家可以在这儿畅所欲言
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  万古星空悬皓月
+</b>:<br>太nice！
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  shortCodeMan
+</b>:<br></p><pre><br>void qsort(ElemType *a,int lo,int hi,int (*cmp)(const void *,const void*))
+<br>{
+<br>    if(lo&gt;=hi)
+<br>    	return;
+<br>    int lt=lo-1,gt=hi+1,cur=lo,res;
+<br>    ElemType *key=&amp;a[lo];
+<br>    while(cur&lt;gt)
+<br>    {
+<br>    	res=cmp(&amp;a[cur],key);
+<br>    	if(res&lt;0)
+<br>    		swap(a,cur++,++lt);
+<br>    	else if(res&gt;0)
+<br>    		swap(a,cur,--gt);
+<br>    	else
+<br>    		cur++;
+<br>    }
+<br>    qsort(a,lo,lt,cmp);
+<br>    qsort(a,gt,hi,cmp);
+<br>}
+<br></pre>
+<br>根据荷兰国旗问题改进的一个快排，当数组有较多重复元素时，这个算法会非常快
+<br><p class="rep">#<span class="rep">malic</span>:所以。。这题放哪儿，是2005年第四(3)题吗？再说你这样就写qsort是通用的啊，没看出有什么改进，cmp函数才体现具体的排序呢。</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  学到四点半
+</b>:<br>return (inclusion(pa,pb) 改成return (inclusion(pa-&gt;next,pb-&gt;next)
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  学到四点
+</b>:<br>第八题
+<br>if (b==NULL)
+<br>
+<br>后面少了return 0；
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  万古星空悬皓月
+</b>:<br>/*与楼主差不多，更精简下*/
+<br>int find_x_path(TNode *T, int x){
+<br>    if(!T || T-&gt;data == x){
+<br>        return !T? 0: 1;
+<br>    }
+<br>    if(find_x_path(T-&gt;left, x) || find_x_path(T-&gt;right, x))
+<br>        printf("%d ", T-&gt;data);
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  万古星空悬皓月
+</b>:<br>刷完打卡，感谢楼主的分享！
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  开心的金明
+</b>:<br>第七题里的return应改为exit更应景一点
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  苏小小小
+</b>:<br>第五题不可以直接用mycompare吗，为什么还要多定义一个cmp函数呢？
+<br></p><p class="rep">#<span class="rep">malic</span>:函数类型不相合，cmp只能用void*类型，转成结构体类型后再用mycompare进行比较,不可以直接传入mycompare</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  大家好呀
+</b>:<br></p><pre><code>
+<br>typedef struct Tree {
+<br>	int data;
+<br>	Tree *lchild;
+<br>	Tree *rchild;
+<br>}Tree;
+<br>int IsAnce(Tree *t,int x) {
+<br>	if (t) {
+<br>		if (t-&gt;data == x)
+<br>			return 1 || IsAnce(t-&gt;lchild, x) || IsAnce(t-&gt;rchild, x);
+<br>	}
+<br>	return false;
+<br>}
+<br>void OutX(Tree *t,int x) {
+<br>	if (IsAnce(t,x))
+<br>		cout &lt;&lt; t-&gt;data &lt;&lt; endl;
+<br>	OutX(t-&gt;lchild, x);
+<br>	OutX(t-&gt;rchild, x);
+<br>}
+<br></code></pre>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  嘿嘿嘿嘿
+</b>:<br></p><pre><br><code>
+<br>typedef struct Tree {
+<br>	int data;
+<br>	Tree *lchild;
+<br>	Tree *rchild;
+<br>}Tree;
+<br>int IsAnce(Tree *t,int x) {
+<br>	if (t) {
+<br>		if (t-&gt;lchild-&gt;data == x||t-&gt;rchild-&gt;data==x)
+<br>			return 1 || IsAnce(t-&gt;lchild, x) || IsAnce(t-&gt;rchild, x);
+<br>	}
+<br>	return false;
+<br>}
+<br>void OutX(Tree *t,int x) {
+<br>	if (IsAnce(t,x))
+<br>		cout &lt;&lt; t-&gt;data &lt;&lt; endl;
+<br>	OutX(t-&gt;lchild, x);
+<br>	OutX(t-&gt;rchild, x);
+<br>}
+<br></code>
+<br></pre>
+<br>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  Cassie
+</b>:<br>第三题kr书上的~~~书上的更简明一点好像~
+<br>
+<br></p><pre><code>
+<br>void qsort(void *v[],int left,int right,int (*cmp)(const void *a,const void *b))
+<br>{
+<br>int i,last;
+<br>if(left&gt;=right) return;
+<br>swap(v,left,(left+right)/2,size);
+<br>last=left;
+<br>for(i=left+1;i&lt;=right;i++)
+<br>{
+<br>	if((*comp)(v[i],v[left])&lt;0)
+<br>	swap(v,++last,i,size);
+<br>}
+<br>swap(v,left,last,size);
+<br>qsort(v,left,last-1,comp);
+<br>qsort(v,last+1,right,comp);
+<br>}
+<br></code></pre>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  学到四点半
+</b>:<br>统一回复一下：关于排序的那道题中的swap函数，因为题目说的是任意数据类型，所以对于不知道类型的数据，没法直接对其进行显示转换并交换，所以上面采取的策略就是根据该类型所占用的字节数，一个字节一个字节的交换，所以就将其强制转换成char*类型了。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  krkr
+</b>:<br>12楼，kr的和这里的不一样吧，kr的那个是对指针数组排序，平时我们用的int a[n] 不是指针数组
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  万古星空悬皓月
+</b>:<br>结构体变量在内存中的存放是由每个成员变量的对齐值决定的。其大小是所有成员变量中最大的对齐值的整数倍
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  旧庐杜门
+</b>:<br>对11楼 的代码进行了一定修改
+<br>int IsAnce(Tree *t,int x) {
+<br>	if (t) {
+<br>		if (t-&gt;data == x)
+<br>			return 1;
+<br>		else
+<br>			return IsAnce(t-&gt;lchild, x) || IsAnce(t-&gt;rchild, x);
+<br>	}
+<br>	return 0;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  Aizen
+</b>:<br>第七题非递归写法
+<br>(1)pre:=pb;
+<br>(2) pa&lt;&gt;NIL AND pb&lt;&gt;NIL AND pb^.data&gt;=pa^.data
+<br>(3)pa:=pa^.next; pb:=pb^.next;
+<br>(4)pb:=pre^.next;pre:=pb;pa:=pa^.next;
+<br>(5)IF pa=NIL THEN return(true) ELSE return(false);
+<br>[注]：本题是在链表上求模式匹配问题。非递归算法中用指针pre指向主串中开始结点（初始时为第一元素结点）。
+<br>若主串与子串对应数据相等，两串工作指针pa和pb后移；
+<br>否则主串工作指针从pre的下一结点开始（这时pre又指向新的开始结点），子串工作指针从子串第一元素开始，比较一直继续到循环条件失败。
+<br>若pa为空，则匹配成功，返回true，否则，返回false
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>18楼-<b>  jjjkkk
+</b>:<br>直接定义一个void类型的temp交换不就行了么第三题kr书上就这么写的啊
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>19楼-<b>  jjjkkk
+</b>:<br>哦不行。傻了
+<br><br></p>            </div>
+        </div>
+
+</div>
+
+<script src="./2018年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</body></html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2008/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+	<title>2008年答案</title>
+	 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2008年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2008年答案_files/ansv3.css">
+  <script src="./2008年答案_files/cmt.js"></script>
+  <script src="./2008年答案_files/jquery.min.js"></script>
+  <script src="./2008年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2008年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2008年答案_files/font-awesome.css">
+<style>
+table tr td
+{
+    border: solid black 1px ;
+}
+</style>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2008/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+<a href="http://www.malic.xyz/ans839/2008/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2008/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2008/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+<ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+   <div id="contents">
+
+<a id="pc01"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 231, 215);">
+        <p>
+一、<br>
+阅读并分析程序(1)
+        </p>
+    </div>
+    <pre>/***运算过程***/
+8/10%5=0,3
+76/10%5=2,1
+88/10%5=3,3
+/***运算过程***/
+
+15
+33
+45
+k=93
+
+    </pre>
+</div>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(231, 255, 231);">
+        <p>
+一、<br>
+阅读并分析程序(2)
+        </p>
+    </div>
+    <pre>3
+1
+1
+k = 5
+
+    </pre>
+</div>
+
+<a id="pc02"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 215, 255);">
+        <p>
+二、按规范写函数定义(1)
+        </p>
+    </div>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#define MAXSIZE 10
+
+int Check(int d[], int e[], int n);
+
+int main()
+{
+    int d1[4] = {1, 3, 2, 5}, e1[4] = {2, 5, 1, 3};
+    int d2[4] = {1, 3, 2, 5}, e2[4] = {2, 5, 3, 1};
+    printf("%d\n", Check(d1, e1, 4));
+    printf("%d\n", Check(d2, e2, 4));
+    return 0;
+}
+
+int Check(int d[], int e[], int n)
+{
+    int flag = 1;
+    for(int i = 0; i &lt;t; n - 1; i++)
+    {
+        if( (d[i] &gt; d[i + 1] &amp;&amp; e[i] &lt;t; e[i + 1]) || (d[i] &lt;t; d[i + 1] &amp;&amp; e[i] &gt; e[i + 1]))       
+//若有不不满足趋势的情况，退出
+        {
+            flag = 0;
+            break;
+        }
+    }
+
+    return flag;
+}
+
+//int Check(int d[], int e[], int n)                     //方法二
+//{
+//    int k1, k2;
+//    for (int i = 1; i &lt;t; n ; i ++)
+//    {
+//        k1 = d[i] - d[i - 1];
+//        k2 = e[i] - e[i - 1];
+//        if (k1 * k2 &lt;t; 0)
+//        {
+//            return 0;
+//        }
+//    }
+//    return 1;
+//}
+    </code></pre>
+</div>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(231, 207, 199);">
+        <p>
+二、按规范写函数定义(2)
+        </p>
+    </div>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+typedef struct
+{
+    int x;
+    int y;
+}POINT;
+
+POINT Go(POINT p0, char steps[]);
+
+int main()
+{
+    POINT p0 = {-4, 1}, p1;
+    char steps[] = {"E2N3E7"};
+    p1 = Go(p0, steps);
+    printf("(%d,%d)", p1.x, p1.y);
+    return 0;
+}
+
+POINT Go(POINT p0, char steps[])
+{
+    char *p = steps;
+    POINT ans_p = p0;
+    while(*p)                               //未到'\0'时，则命令字符串未结束
+    {
+        switch(*p)                         //根据当前命令字符串选择相应的方向
+        {
+            case 'E':
+                p++;               //字符串中，方向指令的下一个字符为移动距离
+                ans_p.x += (*p - '0');
+                break;
+            case 'W':
+                p++;
+                ans_p.x -= (*p - '0');
+                break;
+            case 'N':
+                p++;
+                ans_p.y += (*p - '0');
+                break;
+            case 'S':
+                p++;
+                ans_p.y -= (*p - '0');
+                break;
+        }
+        p++;
+    }
+    return ans_p;
+}
+
+
+    &lt;/p&gt;
+</code>
+</pre>
+</div>
+
+
+
+<a id="pc03"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(231, 239, 247);">
+        <p>
+数据结构，选择题
+        </p>
+    </div>
+    <p>
+BADCD
+CCACD
+
+    </p>
+</div>
+
+<a id="pc04"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(255, 223, 215);">
+        <p>
+1.线性表有两种常用的存储结构，即顺序表和链表，这两种存储结构各有什么优缺点?
+        </p>
+    </div>
+    <p>
+顺序表：可以随机查找，但在表中插入元素需要移动大量数据
+链表：不能随机查找，插入元素只需修改指针
+
+    </p>
+</div>
+
+
+
+<a id="pc05"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 215, 255);">
+        <p>
+2.若将矩阵存储为二维数组，则可以对矩阵中的元素进行随机存取。
+在对特殊矩阵进行压缩存储时，是否有可能保留这种随机存取的功能?
+对一般稀疏矩阵呢?为什么?
+        </p>
+    </div>
+    <p>
+上、下三角，斜对角以及对称矩阵可以实现随机存储，存储空间为一维数组可根据行列位置进行映射，而一般稀疏矩阵进行压缩存储后不能保留这种随机存储功能。
+    </p>
+</div>
+
+
+<a id="pc06"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(215, 207, 215);">
+        <p>
+当顺序表长度固定以后，快速排序在什么情况下所需要的比较次数最多?请举例说明。
+        </p>
+    </div>
+    <pre>当每次划分枢轴都是最小或者待排序列接近有序时，如：
+1 2 3 4 6 5
+1 [2 3 4 6 5]
+1 2 [3 4 6 5]
+1 2 3 [4 6 5]
+1 2 3 4 [6 5]
+1 2 3 4 [6] 5
+1 2 3 4 5 6
+
+    </pre>
+</div>
+
+<a id="pc07"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(223, 215, 223);">
+        <p>
+设散列函数为H(key)=key%7，散列表的地址空间为0~6，初始散列表为空，用线性探测法再散列解决冲突，请画出依次插入键值23,14,9,6,30,12和18后的散列表。并求在等概率情况下查找成功的平均查找长度。
+        </p>
+    </div>
+    <p>
+
+</p><table>
+<tbody><tr><td>key</td><td>23</td><td>14</td><td> 9</td><td> 6</td><td>30</td><td>12</td><td>18</td></tr>
+<tr><td>Hash value</td><td>2</td><td>0</td><td>2</td><td> 6</td><td>2</td><td>5</td><td>4</td></tr>
+</tbody></table>
+
+<table>
+<tbody><tr><td>place</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+<tr><td>key</td><td>14</td><td>18</td><td>23</td><td>9</td><td>30</td><td>12</td><td>6</td></tr>
+<tr><td>compared times</td><td>1</td><td>5</td><td>1</td><td>2</td><td>3</td><td>1</td><td>1</td></tr>
+</tbody></table>
+
+(1+5+1+2+3+1+1)/7=2
+<p></p>
+</div>
+
+
+
+<a id="pc08"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(231, 255, 199);">
+        <p>
+
+请画出下列二叉树所对应的森林
+        </p>
+    </div>
+    <pre>      17
+     /  \
+    10  14
+   /    /
+  6    11
+  
+26
+   /
+  20
+  
+    34
+   /
+  31
+  
+  37
+
+    </pre>
+</div>
+
+
+<a id="pc09"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 255, 223);">
+        <p>
+已知一个无向图的顶点集为(a,b,c,d,e,f)，其邻接矩阵如下所示：
+(1)画出相应的图形<br>
+(2)从顶点a出发进行深度优先遍历和广度优先遍历，写出相应的遍历序列.<br>
+        </p>
+    </div>
+    <p>
+
+    </p>
+</div>
+
+
+<a id="pc10"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(239, 255, 215);">
+        <p>
+算法设计题(1)<br>
+编写一个算法，删除有序单链表中的重复元素
+        </p>
+    </div>
+    <pre><code>
+void Delete_Dup(List L)
+{
+    List p = L-&gt;next, q, t;
+    while(p)
+    {
+        q = p;
+        while(q-&gt;next)
+        {
+            if(q-&gt;next-&gt;data == p-&gt;data)
+            {
+                t = q-&gt;next;
+                q-&gt;next = t-&gt;next;
+                free(t);
+            }
+            else
+                q = q-&gt;next;
+        }
+        p = p-&gt;next;
+    }
+}
+</code>
+    </pre>
+</div>
+
+
+<a id="pc11"></a>
+<br>
+<div class="subAns">
+    <div class="qtitle" style="background-color: rgb(255, 207, 199);">
+        <p>
+算法设计题(2)<br>
+请编写一个递归算法，对按层次顺序存储的拟满树进行中序遍历，假设树中存储的数据是整数
+        </p>
+    </div>
+    <pre><code>
+//数组从0开始存储
+void In_Order(int T[],int i, int n)
+{
+    if(i &lt; n)
+    {
+        In_Order(T, i*2 + 1, n);
+        printf("%d ", T[i]);
+        In_Order(T, i*2 + 2, n);
+    }
+}
+<code>
+    </code></code></pre><code><code>
+</code></code></div><code><code>
+
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  经验同学
+</b>:<br>2003年开始取消“操作系统”和“编译原理“课程考察，
+<br>2009年开始取消选择题类型，
+<br>2002年开始取消“数字电路”课程考察
+<br><br></p>            </div>
+        </div>
+
+<!--
+<img style="width:50%;padding:150px;" src="../denote.png"/>
+-->
+    </code></code></div><code><code>
+<script src="./2008年答案_files/bgcolor.js"></script>
+<script src="./2008年答案_files/cmt.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</code></code></body></html>

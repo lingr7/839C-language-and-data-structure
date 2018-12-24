@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2011/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2011年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2011年答案_files/ansv3.css">
+  <script src="./2011年答案_files/cmt.js"></script>
+  <script src="./2011年答案_files/jquery.min.js"></script>
+  <script src="./2011年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2011年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2011年答案_files/font-awesome.css">
+
+  <title>2011年答案</title>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2011/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+
+<a href="http://www.malic.xyz/ans839/2011/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2011/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2011/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+    <ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+<div id="contents">
+
+<a id="pc01"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(199, 207, 239);">
+	<p>
+		顺序查找的平均比较次数为？选择排序的时间复杂度为？<br>
+		写出把p所指的结点插入一个链栈（栈顶指针为top）的主要语句<br>
+	</p>
+	</div>
+<p>
+(1)ASL=(n+1)/2, O(n^2)<br>
+(2)
+p-&gt;next=s-&gt;top;<br>
+s-&gt;top=p;	<br>
+</p>
+</div>
+
+<a id="pc02"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(255, 223, 215);">
+	<p>
+		写一个函数从串s中删除其值等于ch(ch为一已知字符)的所有字符。
+	</p>
+	</div>
+
+方法1：
+<pre class="codes">
+void delchar(char *s, char ch)
+{
+  int i,j=0;
+    for (i=0; s[i+j]!='\0'; i++)
+    {
+        while(s[i+j]==ch)
+            j++;
+  s[i]=s[i+j];
+    }
+    s[i]='\0';
+}
+
+</pre>
+方法2：
+<pre class="codes">void delchar(char *s,char ch)
+{
+    int i,j=0;
+    for (i=0;s[i];i++){
+        if(s[i]!=ch)
+            s[j++]=s[i];
+    }
+    s[j]='\0';
+}
+
+</pre>
+</div>
+
+<a id="pc03"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(199, 247, 255);">
+	<p>
+		已知一组数(5,7,9,3,1)，分别写出用插入排序和快速排序对它进行排序时每一趟的结果
+	</p>
+	</div>
+<p>
+InsertSort</p>
+<pre>5,7,9,3,1
+5,7,9,3,1
+3,5,7,9,1
+1,3,5,7,9
+</pre>
+<br>
+<p>
+QuickSort:</p>
+<pre>{1, 3}, 5, {9, 7}
+1, {3}, 5, 7, {9}
+</pre>
+
+</div>
+
+<a id="pc04"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(223, 255, 239);">
+	<p>
+		推导5阶下三角矩阵地址公式（假设每个元素占s个存储单元）
+	</p>
+	</div>
+<p>
+(i*(1+i)/2+j)*s
+</p>
+</div>
+
+<a id="pc05"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(231, 215, 215);">
+	<p>
+	已知一组数(2,3,5,7,8)，将这组数作为结点的使用频率画出相应的Huffman树
+	</p>
+	</div>
+<pre>  <code>
+      ()
+     /  \ 
+    /    \ 
+   ()    () 
+  /  \  /  \ 
+ 5   ()7    8 
+    /  \
+   2    3
+
+</code></pre>
+</div>
+
+
+<a id="pc06"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(199, 215, 215);">
+	<p>
+代码填空
+	</p>
+	</div>
+<p>
+(1) &lt;a[i][j]<br>
+(2) a[i][k]+a[k][j]<br>
+(3)k <br>
+(4)print_path(i,k)  <br>
+(5)print_path(k,j)  <br>
+</p>
+</div>
+
+<a id="pc07"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(207, 223, 255);">
+	<p>
+已知一棵二叉树T的标准存储结构（指向树根的指针为t），写一个函数打印此二叉树中所有非叶子结点
+	</p>
+	</div>
+<pre class="codes">void printnode(treenode *T)
+{
+    if (T-&gt;left!=NULL || T-&gt;right!=NULL)
+        printf("%d", T-&gt;data);
+    if (T-&gt;left!=NULL)
+        printnode(T-&gt;left);
+    if (T-&gt;right!=NULL)
+        printnode(T-&gt;right);
+}
+</pre>
+</div>
+
+
+<a id="pc08"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(255, 255, 215);">
+	<p>
+回答问题：<br>
+1.一般函数参数的个数是确定的，但printf()和scanf()标准库函数的参数个数却是可多可少的，那这两个函数的函数原型是如何写的？系统运行时是如何将参数传递给函数的呢？<br>
+2.编译命令#include &lt;header.h&gt;和#include “header.h”的意义有何不同呢
+	</p>
+	</div>
+<p>
+1.<br>
+printf,scanf使用了变长参数<br>
+原型: printf(char *fmt, ...)<br>
+系统通过变长参数传递给printf，printf再调用va_start宏将变长参数存入va_list中，最后调用vsprintf来获取传入的参数<br>
+2.<br>
+&lt;&gt;表示系统头文件，在系统预设中搜寻；<br>
+""表示自定义头文件，在当前目录中搜寻<br>
+</p>
+</div>
+
+
+<a id="pc09"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(255, 215, 255);">
+	<p>
+阅读代码写结果
+	</p>
+	</div>
+<p>
+XYZ<br>
+XZY<br>
+YXZ<br>
+YZX<br>
+ZYX<br>
+ZXY<br>
+</p>
+</div>
+
+<a id="pc10"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(207, 255, 231);">
+	<p>
+写函数定义<br>
+1.函数i2ba将int类型的整数n在内存中表示的每个字节按顺序转换成字节数组s中的每个元素值，返回指向数组首元素的指针<br>
+函数原型 unsigned char* i2ba(int n,unsigned char *s);<br>
+例如在Intel 32位CPU的机器上运行n=-2时，s的前4个元素为254,255,255,255<br>
+2.矩阵a（有h行和w列）的元素只有0和1，函数maxBlock返回矩阵中包含连续1的块大小的最大值<br>
+函数原型 int maxBlock(int **a,int h,int w);<br>
+所谓连续指两个值为1的元素出现在相邻的同一行或相邻的同一列当中。<br>
+	</p>
+	</div>
+<p>1.简单的位运算</p>
+<pre class="codes">unsigned char* i2ba(int n,unsigned char *s)
+{
+    s[0]=n&amp;0xFF;
+    s[1]=(n&gt;&gt;8)&amp;0xFF;
+    s[2]=(n&gt;&gt;16)&amp;0xFF;
+    s[3]=(n&gt;&gt;24)&amp;0xFF;
+    return s;
+}
+</pre>
+
+<p>2.</p>
+
+<pre class="codes">int dfs(int *a,int h,int w,int x,int y);
+int maxBlock(int **a,int h,int w)
+{
+    int i,j,maxCount=-1,currCount=-1;
+    for(i=0;i&lt;h;i++)
+    {
+        for(j=0;ji&lt;w;j++)
+        {
+            if(*((int *)a+i*w+j)==1)
+            {
+                currCount=dfs((int*)a,h,w,i,j);
+                if(currCount&gt;maxCount)
+                    maxCount=currCount;
+            }
+        }
+    }
+    return maxCount;
+}
+
+int dfs(int* a,int h,int w,int x,int y)
+{
+    int nx,ny,k,count=1;
+    int directions[4][2]={{1,0},{-1,0},{0,1},{0,-1}};
+
+    *(a+w*x+y)=0;
+    for(k=0;ki&lt;4;k++){
+        nx=x+directions[k][0];
+        ny=y+directions[k][1];
+        if(nxi&lt;h &amp;&amp; nx&gt;=0  &amp;&amp; nyi&lt;w &amp;&amp; ny&gt;=0)
+        {
+            if(*(a+w*nx+ny)==1)
+                count+=dfs(a,h,w,nx,ny);
+        }
+	}
+    return count;
+}
+
+</pre>
+<p><a href="http://www.malic.xyz/ans839/2011/p10_2.txt" target="_blank">查看完整程序</a></p>
+</div>
+
+
+<a id="pc11"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(239, 207, 247);">
+	<p>
+写程序<br>
+1.程序输入一个整数n(1&lt;=n&lt;=20)，在由0和1组成的长度为n的字符串中，输出不包含“101”子串的字符串的个数。<br>
+例如n=4时，不包含101子串的字符串有12个：<br>
+0000,0001,0010,0011,0100,0110,0111,1000,1001,1100,1110,1111<br>
+2.解一元一次方程<br>
+程序输入一行，只包含整数、小写字母及+,-,=这三个符号（其中‘-’既可作减号，又可作负号）<br>
+方程中没有括号，没有除号，方程中的小写字母表示未知数。<br>
+保证输入的一元一次方程是合法的，有唯一实数解。<br>
+程序输出一行，表示方程的解，保留小数点后3位<br>
+输入样例:<br>
+6a-5+1=2-2a<br>
+输出样例:<br>
+a=0.750<br>
+	</p>
+	</div>
+<p>
+1.checkBit将检查是否含101子串，做法为检测低三位是否为101，若否则右移位，直到所有位全检查后，若无101则return 0;<br>
+主函数中upbd计算出低N位全为1而其它位为0的数值，作为循环上限。遍历所有可能的数，统计不含101的数，即为所求。
+</p>
+
+<pre class="codes">#include &lt;stdio.h&gt;
+
+int checkBit(int x,int N)
+{
+    int i;
+    for(i=2;i&lt;N;i++)
+    {
+        if((x&amp;07)==05)
+            return 1;
+        x&gt;&gt;=1;        
+    }
+    return 0;
+}
+
+int main(void)
+{
+    int x,N,counter=0;
+    int upbd=~(~0&lt;&lt;N);
+
+    scanf("%d\n",&amp;N);
+    for(x=0;x&lt;=upbd;x++)
+    {
+        if(checkBit(x,N)==0)
+            counter++;
+    }
+    printf("%d\n",counter);
+    return 0;
+}
+
+</pre>
+<pre class="codes">2.
+float print(int arr[],int n){
+    int i=0;
+    float sum = 0;
+    for(i=0;i&lt;n;i++){
+       printf("%d ",arr[i]);
+        sum += arr[i];
+    }
+    printf("\n");
+    return sum;
+}
+// 例如表达式 100a+10=4a-2+123-22a char express[] = "100a+10=4a-2+123-22a";
+// 思路：将每个参数全部提取出来100a 10 -4a 2 -123 22a
+// 然后将纯数字放入一个数组中
+// 变量放在另外一个数组中
+double equation(char express[]){
+    int rightOrleft = 1;
+    int next = 1;
+    int i=0,m=0,n=0;
+    char c = express[i];
+    int var[10]; // 存放变量前面的系数
+    int para[10]; // 存放实数
+    int top = 0;
+    char temp[10];
+    if(express[0]=='-'){
+        next = -1;
+        c = express[++i];
+    }
+    
+    while (c!='\0') {
+        if( (c&lt;='9' &amp;&amp; c&gt;='0') || (c&lt;='z' &amp;&amp; c&gt;='a')){
+            //将用于计算的变量或者纯数字缓存起来
+            temp[top++] = c;
+            temp[top] = '\0';//用于后面的字符串转数字
+        } else {
+            // 处理加减符号
+            top--; //除去末尾的'\0'
+            if(temp[top]&lt;='z' &amp;&amp; temp[top]&gt;='a'){
+                //如果缓存的是变量 1a 3a 100a -1a 末尾必定是字母
+                var[m++] = rightOrleft*next*(temp[0]&gt;='a'?1:atoi(temp));
+            } else {
+                //如果缓存的是纯数字
+                para[n++] = rightOrleft*next*(atoi(temp));
+            }
+            // 对下一个对象正负的判断
+            if(c=='-'){
+                next = -1;
+            } else if(c == '+'){
+                next = 1;
+            }
+            // 缓存清零
+            top = 0;
+        }
+        if(c=='='){
+            rightOrleft = -1;
+        }
+        c = express[++i];
+    }
+    top--;// 除去最后一个'\0'
+    // 处理最后一个参数或者变量
+    if(temp[top]&lt;='z' &amp;&amp; temp[top]&gt;='a')
+        var[m++] = rightOrleft*next*(atoi(temp));
+    else
+        para[n++] = rightOrleft*next*(atoi(temp));
+    return -print(para, n)/print(var, m);
+}
+
+int main()
+{
+    char express[] = "-5a+10=4a-2+123-22a+22";
+    printf("%s\na = %.5f\n",express,equation(express));
+}
+</pre>
+</div>
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  渣渣玩巧
+</b>:<br>2011年真题C语言第六题
+<br>（3）k
+<br>（4）print_path（i，k）
+<br>  （5）print_path（k，j）
+<br></p><p style="font-size:80%">#<span style="color:#66F;"><b>malic</b></span>:好，已修改到题目中（这是蔡子经书上一样的代码）</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  学到四点半
+</b>:<br></p><pre><br>int mark[100][100];
+<br>//完美解决方案
+<br>int find(int **a,int h,int w,int i,int j){
+<br>    
+<br>    if (i&lt;0 || i&gt;=h || j&lt;0 || j&gt;=w ||  a[i][j]==0)
+<br>    {
+<br>        return 0;
+<br>    }
+<br>    if(mark[i][j] != -1){
+<br>        return 0;
+<br>    }
+<br>    mark[i][j] = 1;
+<br>    printf("check : (%d,%d)\n",i,j);
+<br>    // find rigth
+<br>    // find top
+<br>    // find down
+<br>    // find left
+<br>    return find(a,h,w,i,j+1)+find(a,h,w,i-1,j)+find(a,h,w,i,j-1)+find(a,h,w,i+1,j)+1;
+<br>}
+<br>
+<br>int maxBlock(int **a,int h,int w){
+<br>    int max = -1;
+<br>    int i=0,j=0;
+<br>    for(i=0;i&lt;h;i++){
+<br>        for(j=0;j&lt;w;j++){
+<br>            if(a[i][j]==1 &amp;&amp; mark[i][j]==-1){
+<br>                int current_max = find(a,h,w,i,j);
+<br>                printf("current_max = %d\n",current_max );
+<br>                max = (max&lt;current_max?current_max:max);
+<br>            }
+<br>        }
+<br>    }
+<br>    return max;
+<br>}
+<br></pre>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  学到四点
+</b>:<br>// 计算表达式那题
+<br></p><p>
+<br>{代码段，已更新到题目中}
+<br></p>
+<br><p class="rep">#<span class="rep">malic</span>:好，这已经更新到题目里了</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  努力学习
+</b>:<br>大大，我运行您的找子串那题的代码为什么没有任何输出啊
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  学到四点
+</b>:<br>楼上的同学，你忘记输入数据了吧！
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  万古星空悬皓月
+</b>:<br>第十题第一问
+<br>unsigned char *i2ba(int n, unsigned char *s){
+<br>    unsigned char *p = (unsigned char *)&amp;n;
+<br>    for (int i = 0; i &lt; 4; ++i) {
+<br>        *(s+i) = *(p+i);
+<br>    }
+<br>    return s;
+<br>
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  学到四点
+</b>:<br>楼上的老哥，你确定你的答案可以运行？
+<br>unsigned char* i2ba(int n, unsigned char *s)
+<br>{
+<br>    
+<br>
+<br>    // 相当于取下多少位出来 0xff 为屏蔽码，表示八位二进制的 1111 1111
+<br>    s[0] = n % 0xFF;
+<br>    s[1] = (n &gt;&gt; 8) &amp; 0xFF;
+<br>
+<br>    s[2] = (n &gt;&gt; 16) &amp; 0xFF;
+<br>    s[3] = (n &gt;&gt; 24) &amp; 0xFF;
+<br>	return s; 
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>   万古星空悬皓月 
+</b>:<br>胸dei， int* 转 char* 从每次读取四个字节 到 每次读取 一个字节 ，和你的解法殊途同归。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  八点零一
+</b>:<br>2011年的真题 第十一题第一小问 为什么是和07按位与  而不是和05呢
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  2122
+</b>:<br>回楼上 如果x =7   
+<br>7&amp;5 是5 可是7的低3位111
+<br>7&amp;7 是7 所以不符合  
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  头铁跨考
+</b>:<br>那个题为什么要 &amp;0xFF 不能直接位移赋值么
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  TEST
+</b>:<br>第11题第一问，直接排列组合就完事了- -
+<br>int pow2(int n)
+<br>{
+<br>    if(n)
+<br>    {
+<br>        int res = 1;
+<br>        for (int i = 0; i &lt; n; ++i)
+<br>        {
+<br>            res *= 2;
+<br>        }
+<br>        return res;
+<br>    }
+<br>    return 0;
+<br>}
+<br>int NumOfStr(int n)
+<br>{
+<br>    int res = pow2(n);
+<br>    for (int i = 3; i &lt;= n; ++i)
+<br>    {
+<br>        res -= pow2(i - 3) * 2;
+<br>    }
+<br>    return res;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  旧庐杜门
+</b>:<br>采用移位赋值
+<br>unsigned char* i2ba(int n, unsigned char *s) 
+<br>{ 
+<br>// ~(~0&lt;&lt;8)为屏蔽码，表示取末端8位
+<br>	for(int i=3; i&gt;=0;i--){
+<br>		s[i] = n &amp; ~(~0&lt;&lt;8);
+<br>		n &gt;&gt;= 8;
+<br>	}
+<br>	return s;
+<br>} 
+<br><br></p>            </div>
+        </div>
+<!--
+<img style="width:60%;padding:120px;" src="../denote.png"/>
+-->
+</div>
+<script src="./2011年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</body></html>

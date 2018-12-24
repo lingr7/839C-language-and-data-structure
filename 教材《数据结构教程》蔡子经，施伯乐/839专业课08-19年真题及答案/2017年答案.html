@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2017/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2017年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2017年答案_files/ansv3.css">
+  <script src="./2017年答案_files/cmt.js"></script>
+  <script src="./2017年答案_files/jquery.min.js"></script>
+  <script src="./2017年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2017年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2017年答案_files/font-awesome.css">
+
+<title>2017年答案</title>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+
+<div id="denote" class="reveal-modal" data-reveal="">
+  <h2>打赏</h2>
+  <p></p>
+  <div style="width:50%;margin:0 auto;">
+  <img src="./2017年答案_files/denote.png">
+  </div>
+  <a class="close-reveal-modal">×</a>
+</div>
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2017/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+<a href="http://www.malic.xyz/ans839/2017/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2017/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2017/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+<ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+
+    <div id="contents">
+<a id="pc01"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 247, 255);">
+    <p>一、<br>(1) int fun() { return fun(); } 执行这段代码会出现什么问题</p>
+    <p>(2)int a;请问数值a&lt;&lt;sizeof(a)*8+1的值为多少。</p>
+</div>
+
+<p>(1)
+<br>编译没有错误，可以编译成可执行程序，但一旦运行起来就会造成内存耗尽而崩溃。这是一个递归的函数，一直在递归调用，永远不能终止。</p>
+<p>(2)
+<br>位运算的优先级最低，先计算sizeof(a)*8+1，一个字节是8位，a是int类型，sizeof(a)=4,这样 sizeof(a)*8+1=33 ， int类型占32位，将a左移33位，所有的数字左移33位后全移出了数据位，不论a初值为多少，任何int类型数据左移33位之后都是0.</p>
+<p style="font-size:80%;color:#333;">可能在一些环境中，试验这个表达式会得到x&lt;&lt;1的值。这是编译器将移位操作提前做了取余，从移位的理论上讲是数值应是0。</p> 
+        
+        </div>
+        <a id="pc02"></a>
+        <br>
+        <div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 199, 255);">
+<p>二、编写一个函数，函数的返回值是执行如下操作后的值：将x从第p位开始的n个位取反，其余各位不变。
+</p>
+</div>
+<p>用位运算的异或</p>
+
+<pre class="codes">unsigned int invert(int x , int p , int n)
+{
+    usigned int mask= ~(~(~0&lt;&lt;n)&lt;&lt;(p+1-n));
+    return x^mask;
+}
+</pre>
+    </div>
+<a id="pc03"></a>
+<br>
+
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 231, 247);">
+<p>三、设计一个函数，函数参数是一个int类型的数据，将这个数的十六进制的形式输出，其中十六进制A-F用大写字母A-F表示。</p>
+</div>
+<pre class="codes">void outputHEX(int x)
+{
+    if(x/16)
+        outputHEX(x/16);
+    printf("%c",x%16&gt;9?x%16-10+'A':x%16+'0');
+}
+</pre>
+</div>
+<a id="pc04"></a>
+<br>
+
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(255, 223, 247);">
+<p>四、设计一个myPrintf()函数,模拟实现库函数printf()， 要求实现二进制、八进制、十进制、十六进制，格式控制符分别为"%b","%o","%d","%x"</p>
+</div>
+<p>几乎是K&amp;R的原题</p>
+<pre class="codes">#include &lt;stdarg.h&gt;
+void myPrintf(char *fmt,...)
+{
+    va_list ap;
+    int tmp[33];
+    char *p,*sval;
+    int i,ival;
+    double dval;
+    va_start(ap,fmt);
+    for (p=fmt;*p;p++)
+    {
+        if(*p!='%')
+        {
+            putchar(*p);
+            continue;
+        }
+        switch(*++p)
+        {
+            case 'b':
+                
+                ival=va_arg(ap,int);
+                while(ival&gt;0)
+                {
+                    tmp[index++]=ival%2;
+                    ival/=2;
+                }
+                for(i=index-1;i&gt;=0;i++)
+                    printf("%d",tmp[i]);
+                break;
+            case 'o':
+                ival=va_arg(ap,int);
+                printf("%o",ival);
+                break;
+            case 'd':
+                ival=va_arg(ap,int);
+                printf("%d",ival);
+                break;
+            case 'x':
+                ival=va_arg(ap,int);
+                printf("%x",ival);
+                break;              
+        }
+
+    }
+    va_end(ap);
+}
+</pre>
+</div>
+<a id="pc05"></a>        
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(247, 199, 215);">
+<p>五、文本文件data.in当中，有多行数字，每行有4个浮点数x1 y1 x2 y2，分别表示矩形的左下角与右上角顶点的两个坐标(x1,y1) (x2,y2).<br>现在请你写一个程序，对这些矩形进行排序。排序的规则为：先按矩形面积从小到大排序，如果面积相同，则按左下角顶点到原点的距离从小到大排序，如果再相同，按左下角顶点的横坐标x1从小到大排序。将排序后的数据再写到文件data.out当中，面积为0的矩形不输出</p>
+</div>
+<pre class="codes">#include &lt;stdio.h&gt;
+#define MAXN 200
+struct pNode
+{
+    double x1,y1;
+    double x2,y2;
+    double area,distance;
+};
+typedef struct pNode Point;
+
+int cmp(const void *a,const void *b)
+{
+    Point m=*(Point*)a,n=*(Point*)b;
+    if(m.area!=n.area)
+        return m.area-n.area;
+    else if(m.distance!=n.distance)
+        return m.distance-n.distance;
+    else
+        return m.x1-n.x1;
+}
+
+int main(void)
+{
+    FILE *fp,*fout;
+    int i=0,N;
+    Point a[MAXN];
+
+    fp=fopen("data.in","r");
+    while(fscanf(fp,"%f",&amp;a[i].x1))
+    {
+        fscanf(fp,"%f%f%f",&amp;a[i].y1,&amp;a[i].x2,&amp;a[i].y2);
+        a[i].area=(a[i].y2-a[i].y1)*(a[i].x2-a[i].x1);
+        a[i].distance=a[i].x1*a[i].x1+a[i].y1*a[i].y1;
+        i++;
+    }
+    fclose(fp);
+
+    N=i;
+    qsort(a,N,sizeof(a[0]),cmp);
+
+    fout=fopen("data.out","w");
+    for(i=0;i&lt;N;i++)
+    {
+        fprintf(fout,"%f %f %f %f\n",a[i].x1,a[i].y1,a[i].x2,a[i].y2);
+    }
+    fclose(fout);
+    return 0;
+}
+
+</pre>
+    </div>
+<a id="pc06"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(207, 199, 223);">
+<p>六、循环队列定义为a[10]，写出它的出队函数</p>
+</div>
+<pre class="codes">ElementType DeleteQ( Queue *PtrQ )
+{    
+    if( PtrQ-&gt;front == PtrQ-&gt;rear )
+    {
+        printf("Queue is empty\n");
+        return -1;
+    } 
+    else {
+        PtrQ-&gt;front = (PtrQ-&gt;front+1) % 10;
+        return PtrQ-&gt;data[PtrQ-&gt;front];
+    }
+}     
+</pre>
+</div>
+
+<a id="pc07"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(223, 223, 239);">
+<p>七、KMP算法，补全代码</p>
+</div>
+<p>代码填空,略</p>
+</div>
+<a id="pc08"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(231, 239, 255);">
+<p>八、给出5个数字，写每趟快速排序的结果</p>
+</div>
+<p>回忆版题目,原题数字已不可考.题目难度较小,掌握排序原理就能做对.</p>
+</div>
+<a id="pc09"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 255, 199);">
+<p>九、二叉树用标准形式存储，判断它是否满足堆的条件，先写出设计思路，并设计一个函数实现</p>
+</div>
+
+<pre class="codes">int estimate_stack(Node *t,int *n)
+{
+	int a = 1,b = 1;//标志位
+	int n1 = 0,n2 = 0;
+	if(t)
+    {
+//如果存在左子树，先判断值是否满足条件，如果满足再递归判断左子树是否满足条件。将最终的结果&amp;&amp;起来
+		if(t-&gt;lc)
+			a = (t-&gt;data &gt;= t-&gt;lc-&gt;data) &amp;&amp; estimate_stack(t-&gt;lc,&amp;n1);
+//如果左子树已经不满足了，不用继续递归右子树了
+        if(t-&gt;rc &amp;&amp; a)
+			b = (t-&gt;data &gt;= t-&gt;rc-&gt;data) &amp;&amp; estimate_stack(t-&gt;rc,&amp;n2);
+//如果左子树个数比右子树个数少，则不是
+        if(n1 &lt; n2)
+			a = b = 0;
+//左右子树加1为自己当前的节点个数
+        *n = n1 + n2 + 1;
+	}
+	else
+		*n = 0;
+//如果为空，则表示这个节点满足定义
+    return a &amp;&amp; b;
+}
+
+</pre>
+</div>
+
+<a id="pc10"></a>
+<br>
+<div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 215, 207);">
+<p>十、一个无向图，通过邻接表判断，任给两点之间是否存在一条长度为K，且不含回路的路径。给思路和代码。</p>
+</div>
+<p>
+</p>
+<pre class="codes">// 可用于解2017最后一题即为找简单路径，没有回路
+// uv:指定的两点 path用于存放路径的数组 d迭代的路径深度 k指定的长度
+void FindPath(ALGraph * algraph,int u,int v,int path[],int d,int k){
+    int w;
+    ArcNode * p;
+    d++;
+    path[d] = u;
+    visited[u] = VISITED;
+    if(u==v){
+        if(d==k){
+            printPath(path,d);
+        }
+        visited[v] = NOT_VISITED;
+        return;
+    }
+    p = algraph-&gt;vertices[u].first;
+    while(p!=NULL){
+        w = p-&gt;adjvex;
+        if(visited[w] == NOT_VISITED){
+            FindPath(algraph,w,v,path,d,k);
+        }
+        p = p-&gt;next;
+    }
+    visited[u] = NOT_VISITED;
+}
+
+
+</pre>
+</div>
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  TEST
+</b>:<br>第十题这个还是有点问题的吧- -
+<br>假设只有两个点连接的无向图0 1，k = 1，按这样算就是没有，level等于2，判断的level + 1为3，返回0
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  TEST
+</b>:<br>哦，不是，是level = 1， level + 1 = 2，返回0
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  TEST
+</b>:<br>应该是两次判断- -都不符合条件最后返回0 
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  TEST
+</b>:<br>还有就是一个图中两两顶点全部连接的图求k = n - 1返回也是0，n不是4的话，这种情况求出来的Level就全是2了，把图当树处理逻辑上还是有问题吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  whta teh f
+</b>:<br>level是初始化为0的，若是无向图,0,1,那么在0出队之后直接找到了1，直接跳出循环了,level并没有自增，还是0，所以边长为level+1=1没有错的
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  TEST
+</b>:<br>假设给的两点是v到u，则从v开始广度优先遍历，找到 u所在的层数，就可以知道u，v的距离了，而且肯定不存在回路
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  TEST
+</b>:<br>邻接表
+<br>0 1 2 3 4
+<br>1 0 2 3 4
+<br>2 0 1 3 4
+<br>3 0 1 2 4
+<br>4 0 1 2 3
+<br>v = 0, u = 4, k = 4
+<br>S    level    tail    last    Q
+<br>N    0        N       0       0
+<br>0    1        3       3       1 2 3
+<br>1    1        3       3       2 3
+<br>2    1        3       3       3
+<br>3    2        3       3       N
+<br>level = 2
+<br>但存在0 1 2 3 4满足k = 4
+<br>当做树广搜没办法找到返回上层再下来的路径的吧？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  TEST
+</b>:<br>这样按层分没有考虑到同层之间的节点的路径吧？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  hurricane
+</b>:<br>确实，这个算法只能判断一条最短的路径，多几条长一点的路径就是没法判断了
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  学到四点
+</b>:<br>第十10可以找到多条长度为k的简单路径啊
+<br>图长这样，找0到3，长度为2的简单路径
+<br>
+<br> 0---1
+<br> |   \. |
+<br> 2---3 
+<br>最后的输出如下：
+<br>---------------find simple path -----------
+<br>find 0&lt;-&gt;3 
+<br>k=:2  path:0---&gt;1---&gt;3
+<br>k=:2  path:0---&gt;2---&gt;3
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  学到四点
+</b>:<br>上面这个代码是还没完成的，稍微修改了一下！！！如下：
+<br>// 可用于解2017最后一题即为找简单路径，没有回路
+<br>// uv:指定的两点 path用于存放路径的数组 d迭代的路径深度 k指定的长度
+<br>void FindPath(ALGraph * algraph,int u,int v,int path[],int d,int k){
+<br>    int w;
+<br>    ArcNode * p;
+<br>    d++;
+<br>    path[d] = u;
+<br>    visited[u] = VISITED;
+<br>    if(u==v){
+<br>        if(d==k){
+<br>            printPath(path,d);
+<br>        }
+<br>        visited[v] = NOT_VISITED;
+<br>        return;
+<br>    }
+<br>    p = algraph-&gt;vertices[u].first;
+<br>    while(p!=NULL){
+<br>        w = p-&gt;adjvex;
+<br>        if(visited[w] == NOT_VISITED){
+<br>            FindPath(algraph,w,v,path,d,k);
+<br>        }
+<br>        p = p-&gt;next;
+<br>    }
+<br>    visited[u] = NOT_VISITED;
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  shortCodeMan
+</b>:<br>char *toHex(int num)
+<br>{
+<br>	if(!num)
+<br>		return "0";
+<br>	char *res=(char *)malloc(9);
+<br>	unsigned int unum=num,tmp;
+<br>	int i=0;
+<br>	res[8]=0;
+<br>	while(unum)
+<br>	{
+<br>		tmp=unum&amp;0x0000000f;
+<br>		*(res+7-i)=tmp+(tmp&gt;9?('A'-10):'0');
+<br>		unum&gt;&gt;=4;
+<br>		i++;
+<br>	}
+<br>	return res+7-i+1;
+<br>}
+<br>用位运算高效完成进制转换
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  1305864551 
+</b>:<br>不好意思，第五题cmp函数中的distance是不是错打成了area了
+<br></p><p class="rep">#<span class="rep">malic</span>:手误，distance不能和area相减。已更正。</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  双非跨考
+</b>:<br>第一个报的错应该是栈溢出吧，但如果考虑尾递归优化，可能栈溢出也不会出现了吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  又是雨天
+</b>:<br>第四题输出二进制的for循环里应该是i--
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  哈喽baby
+</b>:<br>//二、给一个整数x，设计一个函数，要求将x的位模式从第N位到第S位取反，其余的位不变，返回这个数值。
+<br>int revers(int y,int n,int s) {
+<br>	//x n~s
+<br>	int count = 0;
+<br>	int x = y;
+<br>	while (x &gt; 0)
+<br>	{
+<br>		x = x &gt;&gt; 1;
+<br>		count++;
+<br>	}
+<br>	int k = 1;
+<br>	k = (k &lt;&lt; ((s-n)+1))-1;
+<br>	
+<br>	k=k &lt;&lt; (count-s);
+<br>	cout &lt;&lt; k &lt;&lt; endl;
+<br>	return y ^ k;
+<br>}
+<br>//三、设计一个函数，函数参数是一个int类型的数据，将这个数的十六进制的形式输出，其中十六进制A-F用大写字母A-F表示。
+<br>void Hex(int x) {
+<br>	printf("\n%X\n", x);
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  哈喽beby
+</b>:<br>void transform(int x,int type) {
+<br>	int stack[100];
+<br>	int top = -1;
+<br>	while (x) {
+<br>		stack[++top] = x % type;
+<br>		x = x / type;
+<br>	}
+<br>	while (top &gt;-1) {
+<br>		cout &lt;&lt; stack[top--];
+<br>	}
+<br>	cout &lt;&lt; endl;
+<br>}
+<br>void myPrintf(char *a, int x) {
+<br>	
+<br>	for (int i = 0; i &lt; strlen(a); i++) {
+<br>		if (a[i] == '%') {
+<br>			switch (a[i + 1]) {
+<br>			case 'b':
+<br>				transform(x, 2);
+<br>				break;
+<br>			case 'o':
+<br>				transform(x, 8);
+<br>				break;
+<br>			case 'x':
+<br>				transform(x, 16);
+<br>			case 'd':
+<br>				transform(x, 10);
+<br>			default:
+<br>				break;
+<br>			}
+<br>		}
+<br>	}
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>18楼-<b>  123456
+</b>:<br>哇！评论里的代码简单明了！原答案看哭了我
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>19楼-<b>  TEST
+</b>:<br>第二题按这个题目，先位移的位数和后位移的位数反了吧- -
+<br>int BitwiseComplement(int x,int N,int S)
+<br>{
+<br>    int mask= ~(~0&lt;&lt;(N+1-S))&lt;&lt;(S);
+<br>    return x^mask;
+<br>}
+<br>测试数据 
+<br>109 5 2//1101101
+<br>原答案返回93//1011101
+<br>交换次序后返回81//1010001
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>20楼-<b>  为啥至少四个字符
+</b>:<br>第九题的答案好像没办法处理不是完全二叉树的情况 可以用队列层次遍历判断完全二叉树的方法 加上大小判断来做
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>21楼-<b>  大家好啊
+</b>:<br>第九题
+<br>
+<br>bool IsHeap(Tree *T,int *n) {
+<br>	//思路就是判断 父亲节点是否大于子节点，
+<br>	//还有左子树要小于右子树。
+<br>	int flag_l = 1;
+<br>	int flag_r = 1;
+<br>	int n1 = 0, n2 = 0;
+<br>	if (T) {
+<br>		if (T-&gt;lchild)
+<br>			if (T-&gt;data &gt;= T-&gt;lchild-&gt;data)
+<br>				flag_l = 1 &amp;&amp; IsHeap(T-&gt;lchild, &amp;n1);
+<br>		if (T-&gt;rchild)
+<br>			if (T-&gt;data &gt; T-&gt;rchild-&gt;data)
+<br>				flag_r = 1 &amp;&amp; IsHeap(T-&gt;rchild, &amp;n2);
+<br>		if (n1 &lt; n2) {
+<br>			flag_l = flag_r = 0;
+<br>		}
+<br>		*n = n1 + n2 + 1;//节点数	
+<br>	}
+<br>	else
+<br>			*n = 0;
+<br>	return flag_l &amp;&amp; flag_r;
+<br>	
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>22楼-<b>  双非跨考
+</b>:<br>第九个题是怎么判断是堆是一棵完全二叉树的呢？判断不出来吧，可以自己手动写个程序判断下，建一个当前节点值比左孩子节点值和右孩子节点值大的二叉树，判断一下就会发现第九题的代码是错的。
+<br>比如：
+<br>      10
+<br>     / \
+<br>    7  8
+<br>   / \
+<br>  4   5
+<br> / \
+<br>2  1
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>23楼-<b>  双非跨考
+</b>:<br>为啥我的排版都没了。。。。。
+<br>10(7(4(2,1),5),8)
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>24楼-<b>  ZZLL
+</b>:<br>c语言第五题。将排序后的数据再写到文件data.out当中，面积为0的矩形不输出。程序有实现，面积为0的矩形不输出么
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>25楼-<b>  TEST
+</b>:<br>第二题：
+<br>  mask = ~(~0&lt;&lt;n)&lt;&lt;(p+1-n);
+<br>答案中漏写了一个0和多取了一次反
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>26楼-<b>  辽宁工程技术大学
+</b>:<br>同意25楼观点
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>27楼-<b>  我是菜逼
+</b>:<br>第六题，只有一个节点的时候还没判断。。是
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>28楼-<b>  Mindy
+</b>:<br>直接返回m.area-n.area不准确，因为这事浮点型，差值可能为零点几，直接返回就截断成0了
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>29楼-<b>  第十题哦
+</b>:<br>是if(u！=v)才继续网下走吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>30楼-<b>  第二大题
+</b>:<br>第二大题是正确的
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>31楼-<b>  婷婷看招
+</b>:<br>//最后一题
+<br>void findpath(ALGraph &amp;G, int v, int u, int k, , int d,int flag) { //(v,u)
+<br>
+<br>	visited[v] = 1;
+<br>	d++;
+<br>	if (u == v)
+<br>		if (d == k)
+<br>			flag=1;//符合条件返回1
+<br>	for(int w = FirstNeighbor(G, v); w &gt; 0; w = NextNeighbor(G, v, w)) {
+<br>		if (!visited[w])
+<br>			findpath(G, w, u, k, d,flag);  //flag==1 说明有该路径
+<br>	}
+<br>	visited[v] = 0; //重置为未访问。
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>32楼-<b>  提个问题
+</b>:<br>第九题，对于链式存储的二叉树来存储堆，有必要判断是完全二叉树吗？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>33楼-<b>  上师大最弱的
+</b>:<br>为何第九题要判断左子树小于右子树？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>34楼-<b>  上师大第二弱的
+</b>:<br>答案中判断左子树小于右子树时不成立已经在判断是否是完全二叉树了，不是完全二叉树就不是堆了，不用专门思考不是完全二叉树的情况了
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>35楼-<b>  旧庐杜门
+</b>:<br>对第二题的修正
+<br>unsigned int invert(int x , int p , int n)
+<br>{
+<br>    usigned int mask= ~(~0&lt;&lt;n)&lt;&lt;(p+1-n);/*将n个1左移到需要的位置，因为与1异或即取反，与0异或即本身*/
+<br>    return x^mask;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>36楼-<b>  hhhh
+</b>:<br>31楼
+<br>flag是否应该是指针
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>37楼-<b>  25楼是错误的
+</b>:<br>第二题答案正确
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>38楼-<b>  ggjgj
+</b>:<br>  for(i=0;i&lt;N;i++)
+<br>    {   if(a[i].area！=0)
+<br>        fprintf(fout,"%f %f %f %f\n",a[i].x1,a[i].y1,a[i].x2,a[i].y2);
+<br>    }
+<br>    fclose(fout);
+<br>    return 0;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>39楼-<b>  旧庐杜门
+</b>:<br>我35楼的说法错误。支持37楼
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>40楼-<b>  旧庐杜门
+</b>:<br>关于第二题，为验证结果，代码如下
+<br>/*
+<br>	Name: 
+<br>	Copyright: 
+<br>	Author: 
+<br>	Date: 18/12/18 15:00
+<br>	Description: 只能取出最右边一位，获得该数补码形式 
+<br>	32位版本 
+<br>*/
+<br>#include &lt;stdio.h&gt;
+<br>void print_b(int n);
+<br>unsigned int invert(int x , int p , int n)/*特定位取反*/
+<br>{
+<br>    unsigned int mask= (~(~0&lt;&lt;n)&lt;&lt;(p-n));/*正确结果*/
+<br>    /*~(~(~0&lt;&lt;n)&lt;&lt;(p+1-n))*/
+<br>	return x^mask;
+<br>}
+<br>unsigned int invert2(int x , int p , int n)/*现答案*/
+<br>{
+<br>    unsigned int mask= ~(~(~0&lt;&lt;n)&lt;&lt;(p+1-n));
+<br>	return x^mask;
+<br>}
+<br>void print_b(int n){/*输出有符号整数的二进制位形式*/
+<br>	int a[32];
+<br>	int i = 0;
+<br>	while(i&lt;32){
+<br>		a[i] = n &amp; 1;
+<br>		n &gt;&gt;= 1;
+<br>		i++; 
+<br>	}
+<br>	for(i = 31; i &gt;= 0; i--){
+<br>		printf("%d", a[i]);
+<br>	}
+<br>	printf("\n");
+<br>}
+<br>int main(){
+<br>	print_b(1);
+<br>	print_b(invert(1, 5 ,2));
+<br>	//print_b(invert2(1, 5 ,2));
+<br>	/* p==5, n==2从右边数第p位，再向右数n位*/
+<br>	/*则第5位与第4位取反*/
+<br>	print_b(0^1);/*结果1*/
+<br>	print_b(1^1); /*结果0*/
+<br>	/*与1异或即可取反*/
+<br>	return 0;
+<br>}
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>41楼-<b>  姑娘加油
+</b>:<br>21楼第九题答案好像是错的，参考https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-heap/
+<br><br></p>            </div>
+        </div>
+
+</div>
+<!--
+<img style="width:50%;padding:130px;" src="../denote.png"/>
+-->
+
+
+
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+    <script src="./2017年答案_files/bgcolor.js"></script>
+
+
+</body></html>

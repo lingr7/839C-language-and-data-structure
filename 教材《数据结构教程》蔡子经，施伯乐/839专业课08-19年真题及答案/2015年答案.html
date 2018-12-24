@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2015/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./2015年答案_files/foundation.min.css">
+  <link rel="stylesheet" href="./2015年答案_files/ansv3.css">
+  <script src="./2015年答案_files/cmt.js"></script>
+  <script src="./2015年答案_files/jquery.min.js"></script>
+  <script src="./2015年答案_files/foundation.min.js"></script><style></style>
+  <script src="./2015年答案_files/modernizr.js"></script>
+  <link rel="stylesheet" href="./2015年答案_files/font-awesome.css">
+
+<title>2015年答案</title>
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2015/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+
+<a href="http://www.malic.xyz/ans839/2015/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2015/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2015/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+      <li class="active"><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+      <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+    <ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+       
+    <div id="contents">
+    <br>
+    	<div class="subAns">
+<div class="qtitle" style="background-color: rgb(247, 199, 247);">
+	<p>数据类型</p>
+</div>
+
+        <p>1.（1）
+(1)a是int*类型，a[0]是int类型，b是double[][]类型，b[0]是double[]类型，b[0][0]是double类型
+        </p>
+        <p>
+        2.
+        (1)sa中元素个数=sizeof(sa)/sizeof(sa[0])<br>
+        (2)sa[]中各个元素都是常量，分配在初始化区，而sb中各元素都是占据实际的变量空间，位于内存的用户栈区。<br>
+        (3).分别为n*sizeof(char*),n*80*sizeof(char)=80*n.<br>
+        其中sizeof(char*)和机器位数有关，如果是32位机，则sizeof(char*)=4，64位机则sizeof(char*)=8.<br>
+        </p>
+    </div>
+        <a id="pc02"></a>
+        <br>
+    <div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 215, 239);">
+	<p>二、读程序写运行结果</p>
+</div>
+        <pre>Case #1: 1 4 2 3 5
+Case #2: -5 88 11 20 2 -12 87
+        </pre>
+    </div>
+        <a id="pc03"></a>
+        <br>
+    <div class="subAns">
+<div class="qtitle" style="background-color: rgb(199, 215, 255);">
+    <p>三、按要求写函数定义<br>
+    设A和B是两个已有元素个数分别为n和m的按升序排序的整数数组，现在要合并A和B,并且合并后仍然按照升序排序。假设数组A中有足够的空间存放合并后的结果，要求在不使用临时缓冲区的情况下实现合并的功能。写出函数定义。<br>
+    函数原型为：void Merge(int *A,int n,int *B,int m);
+    </p>
+</div>
+        <p>
+不使用临时缓冲区是指不可以用malloc()申请区域进行数据存取，可以定义指针。
+</p><pre>    <code>
+void Merge(int *A,int n,int *B,int m)
+{
+    //merging from tail will spend less times to move
+    int lenA=n,ptrA=n-1,ptrB=m-1,i;
+    while(ptrA&gt;0 &amp;&amp; ptrB &gt;=0)
+    {
+        if(A[ptrA]&gt;B[ptrB] &amp;&amp; A[ptrA-1] &lt; B[ptrB])
+        {
+            for(i=lenA-1;i&gt;ptrA;i--)
+            {
+                A[i+1]=A[i];
+                lenA++;
+            }
+
+        A[ptrA]=B[ptrB]
+        }
+        ptrA--;
+        ptrB--;
+    }
+    // if A merged,while B still contained less elements
+    if(ptrB&gt;=0)
+    {
+        for(i=lenA-1;i&gt;=0;i--) //leave space for A[0...prtB]
+            A[i+ptrB]=A[i]
+        lenA+=ptrB;
+        for(i=-0;i &lt; ptrB;i++)
+            A[i]=B[i];
+    }
+}
+</code>    </pre>
+        <p></p>
+
+    </div>
+    <a id="pc04"></a>
+    <br>
+
+    <div class="subAns">
+    <div class="qtitle" style="background-color: rgb(199, 207, 223);">
+        <p>四、定义一个函数删除一个单向链表的重复节点，不使用临时缓冲区<br>
+        函数原型为 void Remove Duplicates(LINK *head);
+        自定义节点类型LINK,节点存放的是一个整型数据.
+    </p>
+    </div>    
+
+
+<pre>    <code>
+typedef struct LNode LINK;
+struct LNode
+{
+    int data;
+    LINK* Next;
+};
+void Remove Duplicates(LINK *head)
+{
+    LINK *curr,*prev,*tmp;
+    curr=head;
+    while(curr)
+    {
+        tmp=curr-&gt;Next;
+        prev=curr;
+        whilie(tmp)
+        {
+            if(tmp-&gt;data == curr-&gt;data)
+            {
+                prev-&gt;Next=tmp-&gt;Next;
+                free(cmp);
+                tmp=prev;
+            }
+            tmp=tmp-&gt;Next;
+
+
+        }
+        curr=curr-&gt;Next;
+        }
+}
+</code>
+</pre>
+
+    </div>
+         <a id="pc05"></a>
+         <br>
+
+    <div class="subAns">
+<div class="qtitle" style="background-color: rgb(207, 223, 239);">
+    <p>五、文件中存放着N<sup>2</sup>*N<sup>2</sup>(3&lt;N&lt;6)大小的矩阵,矩阵元素均为[1,N<sup>2</sup>]的整数。请你写程序判断文件中保存的矩阵是否满足数独的要求</p>
+	</div>
+
+
+<pre>    <code>
+#include &lt;stdio.h&gt;
+#define MAXN 6
+#define MAXRANGE 36
+int main(void)
+{
+    FILE *fp;
+    int RANGE,ORDER;
+    int i,j,k1,k2;
+    int judgeFlag=1;
+    int sudoku[MAXRANGE][MAXRANGE];
+    char bucket[MAXN*MAXN];
+
+    fp=fopen("dataIN","r");
+    fscanf(fp,"%d",&amp;ORDER);
+    RANGE=ORDER*ORDER;
+    for(i=0;i&lt;RANGE;i++)
+        for(j=0;j&lt;RANGE;j++)
+            fscanf(fp,"%d",&amp;sudoku[i][j]);
+
+    for(i=0;judgeFlag==1 &amp;&amp; i&lt;RANGE;i++)
+    {
+        for(j=0;j&lt;=RANGE;j++)
+            bucket[j]=0;
+        for(j=0;j&lt;RANGE;j++)
+            bucket[sudoku[i][j]]+=1;
+        for(j=1;j&lt;=RANGE;j++)
+            if(bucket[j]!=1){
+                judgeFlag=0;
+                break;
+            }
+    }
+
+    for(j=0;judgeFlag==1 &amp;&amp; j&lt;RANGE;j++)
+    {
+        for(i=0;i&lt;RANGE+1;i++)
+            bucket[i]=0;
+        for(i=0;i&lt;RANGE;i++)
+            bucket[sudoku[i][j]]+=1;
+        for(i=1;i&lt;=RANGE;i++)
+            if(bucket[i]!=1){
+                judgeFlag=0;
+                break;
+            }
+    }
+
+    for(k1=0;judgeFlag==1 &amp;&amp; k1&lt;RANGE;k1+=ORDER)
+    {
+        for(k2=0;judgeFlag==1 &amp;&amp; k2&lt;RANGE;k2+=ORDER)
+        {
+            for(i=0;i&lt;RANGE+1;i++)
+                bucket[i]=0;
+
+            for(i=0;i&lt;ORDER;i++)
+                for(j=0;j&lt;ORDER;j++)        
+                    bucket[sudoku[k1+i][k2+j]]++;
+
+            for(i=1;i&lt;=RANGE;i++)
+                if(bucket[i]!=1)
+                {
+                    judgeFlag=0;
+                    break;
+                }
+        }
+    }
+    if(judgeFlag)
+        printf("Yes\n");
+    else
+        printf("No\n");
+
+    return 0;
+}
+</code>
+</pre>
+    </div>
+        <a id="pc06"></a>
+        <br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(207, 207, 199);">
+<p>六、顺序表原地逆置</p>
+	</div>
+<pre>    <code>
+void ReverseList(int *A,int n)
+{
+    int i,tmp;
+    for(i=0;i⁢n/2;i++)
+    {
+        tmp=a[i];
+        a[i]=a[n-1-i];
+        a[n-1-i]=tmp;
+    }
+}
+<code>
+</code></code></pre><code><code>
+            <p>时间复杂度为O(n)
+            
+        </p>
+    </code></code></div><code><code>
+        <a id="pc07"></a>
+        <br>
+    <div class="subAns">
+<div class="qtitle" style="background-color: rgb(215, 223, 223);">
+<p>七、有四个元素a,b,c,d依次入栈，入栈过程中允许出栈，请分析并写出所有可能的以a开头的出栈序列
+</p>
+</div>
+        <p>a开头的出栈序列，等价于求b,c,d的所有可能的出栈序列再前缀a，也就是b,c,d可能的出栈序列共5种，从而可知答案为abcd,acbd,adcb,abdc,acdb</p>
+</div>
+            <a id="pc08"></a><br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(239, 199, 255);">
+<p>八、分别写出用冒泡排序和选择排序对序列[7,3,8,2,9]的每一趟过程</p>
+	</div>
+    <p>BubbleSort:<br>
+    (7,3,8,2,9)<br>
+    (3,7,2,8,9)<br>
+    (3,2,7,8,9)<br>
+    (2,3,7,8,9)<br>
+    Selection Sort:<br>
+    (7,3,8,2,9)<br>
+    (2,3,8,7,9)<br>
+    (2,3,7,8,9)<br>
+    </p>
+
+    </div>
+        <a id="pc09"></a>
+        <br>
+<div class="subAns">
+	<div class="qtitle" style="background-color: rgb(199, 223, 231);">
+<p>九、分析一个半带宽为2的带状矩阵（6阶方阵）的值为0的元素总个数</p>
+	</div>
+        <p>
+        值为0的元素在右下与左上的三角形区域，每个区域有6个零元素，所有带状矩阵就有12个值为零的元素。
+    </p>
+        </div>
+    <a id="pc10"></a>
+    <br>
+
+    <div class="subAns">
+ <div class="qtitle" style="background-color: rgb(255, 231, 247);">
+ 	<p>十、一个标准形式的二叉树转换为扩充二叉树</p>
+ </div>
+    <p>最好先声明一下扩充标准形的结点内容，再写函数</p>
+    <pre class="codes">struct ExTNode
+{
+    ExTree *Lchild,*RChild;
+    ExTree *parent;
+    int data;
+};
+typedef struct ExTNode ExTree;
+ExTree* expand(BinTree T)
+{
+    ExTree newTree;
+    newTree=(ExTree*)malloc(sizeof(ExTree));
+    newTree-&gt;parent=NULL;
+    newTree=-&gt;data=T-&gt;data;
+    if(T-&gt;Lchild)
+    {
+        newTree-&gt;LChild=expand(T-&gt;LChild);
+        newTree-&gt;LChild-&gt;parent=newtree;
+    }
+    if(T-&gt;Rchild)
+    {
+        newTree-&gt;RChild=expand(T-&gt;RChild);
+        newTree-&gt;RChild-&gt;parent=newtree;
+    }            
+  return T;
+}
+    </pre>
+        </div>
+
+    <a id="pc11"></a><br>
+    <div class="subAns">
+<div class="qtitle" style="background-color: rgb(239, 215, 255);">
+    <p>十一、写出对一棵查找树（内部结点和外部结点的查找概率都已知）进行成功查找和不成功查找所需的平均比较次数，并对这两个比较次数作简要的解释。<br>
+    写出等概率情况下最佳查找树的查找代价</p>
+</div>
+    <p>
+    (2)
+        p<sub>i</sub>是内部结点a<sub>i</sub>的查找概率，
+        q<sub>i</sub>是外部结点b<sub>i</sub>的查找概率。<br>查找成功的平均比较次数为
+        <img src="./2015年答案_files/gif.latex"><br>
+        查找失败的平均比较次数为
+        <img src="./2015年答案_files/gif(1).latex">
+        <br>
+        </p><p>
+        这一段关于“最佳查找树”的内容在蔡子经《数据结构教程》中有体现
+        </p>
+
+<p></p>
+</div>
+
+ <a id="pc12"></a><br>
+    <div class="subAns">
+<div class="qtitle" style="background-color: rgb(231, 215, 239);">
+    <p>十二、设有向图G=(V,E)中的顶点表示通信结点，边表示通信链路，每条边(u,v)属于E均对应一个实数值r(u,v),0&lt;=r(u,v)&lt;=1,它表示从顶点u到顶点v的通信链路不中断的概率（即通信链路的可靠性），假设这些概率是相互独立的，试简单地写出求指定顶点对之间最可靠的可通路径算法的主要思路<br>
+</p>
+</div>
+    <p>
+要求指定两点间通信链路不中断的概率，即每条边的概率之乘积。要应用Dijkstra或Folyd算法，可以对概率值取对数，这样就将各边的权值(概率)的乘积转化为了权的对数之和，就可以应用求最“长”路径的算法求出最可靠的通路。<br>但注意概率取值为[0,1],直接取对数作为权值，数值上都为不大于0的数值，此时Dijkstra算法失效.<br>所以转化时若取负对数的变换-log(r),则可以保证图的边权不小于0，这样可以应用求最短路径的算法计算。设求得的最短路径长度为 ans, 则该路径不中断的概率为 e<sup>-ans</sup>
+
+</p>
+</div>
+
+
+
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  bald girl
+</b>:<br>学长，第三题好像有多处打错，另外看你的算法是插入排序，我使用的选择排序，挑两个数组中最大的放在末尾是不是比较好，王道p37-13
+<br></p><p style="font-size:80%;">#<span style="color:#77F;"><b>malic</b></span>:有些代码在整理的时候没有试验，确实有些录入错误，现已更正。加了一点注释.</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  夜雨声烦
+</b>:<br>学长,第三题如果先判断A的最大值比B的最小值都小这种情况(或者A的最小值比B的最大值都大),直接就可以合并,然后其他情况就按上面的写行不,需要加上这个吗?
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  Near
+</b>:<br>第十题的代码好像有打错的地方
+<br></p><p style="font-size:80%;">#<span style="color:#55F;"><b>malic</b>:</span>对，多打了一个'w'，已更正</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  小舟123
+</b>:<br>第二题：问char* sa[]与char sb[][80]在内存分配方面的不同点
+<br>回答：
+<br>(2)sa[]中各个元素都是常量，分配在初始化区，而sb中各元素都是占据实际的变量空间，位于内存的用户栈区。
+<br>疑问：
+<br>这样回答是否不够准确。
+<br>1.sa[]中各个元素是char*类型的指针，它是个指针常量，指向特定的字符串。所以它存储在静态数据区。
+<br>2.sb[]中个元素是指针变量，指向一个存放80个char构成的数组的指针。如果它不是在全局中声明，则会存储于用户栈区。
+<br></p><p class="rep">#<span class="rep">malic</span>:对，应该写的更详细更准确些</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  潇洒哥 史蒂夫
+</b>:<br>数据第六题  for(i=0;i&lt;(n-1)/2;i++) 应为n/2 否则n为偶数时中间不能 元素正常排序
+<br></p><p class="rep">#<span class="rep">malic</span>:好，已更正</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  小小小舟
+</b>:<br>第四题：定义一个函数删除一个单向链表的重复节点
+<br>疑问：这个题目并没有说链表是已排序的，所以比较临近的节点是否相等来删除重复节点不可行。而且链表排序比较复杂。
+<br>我的做法：
+<br>1.开一个与链表长度相等的hash数组，初始化为0
+<br>2.从头节点指向的第一个节点开始遍历链表，判断hash【p-&gt;data】是否等于0。
+<br>若等于零则说明这个节点的值是第一次出现。令hash【p-&gt;data】=1。
+<br>3.若判断不等于0，说明该节点值已经出现过，则删除该节点。
+<br>4.这样遍历一遍可删除重复的节点，时间复杂度为On
+<br></p><p class="rep">#<span class="rep">malic</span>:并没有比较相邻结点呀。外层while()对每一个结点curr执行操作，内层做的是检查curr后的所有结点是否与curr的数据域相同，若相同则删去结点。<br>如果你开数组，就使用了临时缓冲区了，不符合题目要求</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  小小小舟 
+</b>:<br>十二、
+<br>1.首先将G=(V,E)中的顶点分为两组，分别设为已确认最可靠路径的集合S1和未确认最可靠路径的集合S2。
+<br>2.按照起点u能达到的且不中断的概率由大到小的顺序逐个将S2中的顶点依次放入S1中，直到从起点u出发可以到达的所有顶点均放入了S1中。
+<br>3.每次将S2中顶点放入S1,更新起点u到S2中各顶点的不中断概率。然后再执行下一次步骤2操作，总保持从起点v到S1中各顶点的不中断概率均不小于从v到S2中各顶点的不中断概率。
+<br>4.最后，每个顶点处需要记录从起点v到该顶点路径的前置顶点，S1中的顶点就是起点v出发到各个顶点的最大概率。根据每个顶点的前置顶点可以获得唯一最可靠路径。S2中若还剩余顶点则是起点v无法联通的顶点。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  我就随便说说
+</b>:<br>第五题最后用来判断3*3是否是数独的语句  
+<br>最后应该for(i=1; i&lt;rang; i++)的吧 ，3*3的数独里面有9个元素 ，你也应该判断9次bucket[i]!=1啊
+<br></p><p class="rep">#<span class="rep">malic</span>:是这样的，当然该是i=1 to RANGE</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  小小小舟
+</b>:<br>十、一个标准形式的二叉树转换为扩充二叉树
+<br>一点疑问：这个答案中的创建树的函数中没有地方有写到return 那创建的这棵树怎么得到它的根节点呢？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  shortCodeMan
+</b>:<br>void merge(int* nums1, int m, int* nums2, int n) {
+<br>    int i=m-1,j=n-1,tar=m+n-1;
+<br>    while(j&gt;=0)
+<br>        nums1[tar--]=i&gt;=0&amp;&amp;nums1[i]&gt;nums2[j]?nums1[i--]:nums2[j--];
+<br>}
+<br>三行搞定，还有更短的吗
+<br></p><p class="rep">#<span class="rep">malic</span>写程序是为了让人看懂。在OJ交程序的时候可以追求短，有本书《短码之美 short coding》就是在POJ上的一些题在短码编程的种种情形。</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  万古星空悬皓月
+</b>:<br>第三题 应该是case #1: 1 4 2 3 5 吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  万古星空悬皓月 
+</b>:<br>int  Merge(int *A,int n,int *B,int m){
+<br>    A[n+m-1] = m &gt; 0 &amp;&amp; A[n-1] &lt; B[m-1]? B[--m]: A[--n];
+<br>    return n &gt; 0 &amp;&amp; m &gt; 0 ?Merge(A, n, B, m): 0;
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  jasen
+</b>:<br>十二用Floyd改写比较简单
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  jasen
+</b>:<br>十一题答案好像错了 查找不成功的平均查找次数好像不用加+1
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  Annetree
+</b>:<br>第二大题同11楼，case1应该是14235
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  小学弟1
+</b>:<br>学长，这样长代码不直观了😂，要左右上下拖
+<br></p><p class="rep">#<span class="rep">malic</span>:好，样式稍微改了一下，现在代码自动换行了</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  ?????
+</b>:<br>void Merge_2(int *A, int n, int *B, int m) {
+<br>	while (m--) {	
+<br>		A[m + n - 1] = n&gt;=0&amp;&amp;A[n--] &gt; B[m--] ? A[n--] : B[m--];
+<br>	}
+<br>}
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>18楼-<b>  Annetree
+</b>:<br>第十题：
+<br>1.函数的形参是否应该加星号？还是加星号不加星号都可以？
+<br>2.return 的或许应该是newTree
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>19楼-<b>  TEST
+</b>:<br>int pre[100], num, en;
+<br>double map[100][100];
+<br>bool unvisited[100];
+<br>void setdata()
+<br>{
+<br>
+<br>    int m, n;
+<br>    scanf("%d %d", &amp;num, &amp;en);
+<br>    for (int i = 0; i &lt; num; ++i)
+<br>    {
+<br>        pre[i] = i;
+<br>        unvisited[i] = true;
+<br>        map[i][i] = 1.0;
+<br>        for (int j = i + 1; j &lt; num; ++j)
+<br>        {
+<br>            map[i][j] = map[j][j] = 0.0;
+<br>        }
+<br>    }
+<br>    for (int i = 0; i &lt; en; ++i)
+<br>    {
+<br>        scanf("%d %d", &amp;m, &amp;n);
+<br>        scanf("%lf", &amp;map[m][n]);
+<br>    }
+<br>}
+<br>
+<br>void solve()
+<br>{
+<br>    int s, e, node;
+<br>    double max;
+<br>    scanf("%d %d", &amp;s, &amp;e);
+<br>    for (int i = 0; i &lt; num; ++i)
+<br>    {
+<br>        if(map[s][i] != 0.0)
+<br>        {
+<br>            pre[i] = s;
+<br>        }
+<br>    }
+<br>    unvisited[s] = false;
+<br>    for (int i = 0; i &lt; num; ++i)
+<br>    {
+<br>        max = 0.0;
+<br>        node = s;
+<br>        for (int j = 0; j &lt; num; ++j)
+<br>        {
+<br>            if(unvisited[j])
+<br>            {
+<br>                if(map[s][j] &gt; max)
+<br>                {
+<br>                    node = j;
+<br>                    max = map[s][j];
+<br>                }
+<br>            }
+<br>        }
+<br>        if(node == e)
+<br>        {
+<br>            break;
+<br>        }
+<br>        unvisited[node] = false;
+<br>        for (int j = 0; j &lt; num; ++j)
+<br>        {
+<br>            if(unvisited[j] &amp;&amp; map[s][j] &lt; map[node][j] * map[s][node])
+<br>            {
+<br>                map[s][j] = map[node][j] * map[s][node];
+<br>                pre[j] = node;
+<br>            }
+<br>        }
+<br>    }
+<br>    printf("%d&lt;-", e);
+<br>    while(pre[node] != s)
+<br>    {
+<br>        printf("%d&lt;-", pre[node]);
+<br>        node = pre[node];
+<br>    }
+<br>    printf("%d\n", s);
+<br>}
+<br>测试数据
+<br>5 5
+<br>0 1 0.82
+<br>1 2 0.8
+<br>0 3 0.9
+<br>3 4 0.9
+<br>4 2 0.9
+<br>0 2
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>20楼-<b>  TEST
+</b>:<br>第十二题的
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>21楼-<b>  yiko
+</b>:<br>第四题 内循环中如果是非重复元素 指针pre应该一起移动 以便后续重复元素删除
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>22楼-<b>  Annetree
+</b>:<br>同21楼，prev在元素不等情况下应该也往后移动
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>23楼-<b>  Annetree
+</b>:<br>十一题同14楼
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>24楼-<b>  宝↑生↓永↑梦↓
+</b>:<br>2015第六题i＜n漏了＜，另外建议先判断n是否大于数组元素个数
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>25楼-<b>  Mindy
+</b>:<br>C语言第一题第2小题sa[]和sb[]弄反了吧
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>26楼-<b>  旧庐杜门
+</b>:<br>/*
+<br>	Name: 归并排序不适用缓冲区 
+<br>	Copyright: 
+<br>	Author: lingr7
+<br>	Date: 15/12/18 10:54
+<br>	Description: 有序部分插入，使用插入排序或选择排序都可以，这里使用插入排序 
+<br>*/
+<br>void Merge(int *A,int n,int *B,int m){
+<br>	int i, j, k;
+<br>	for(k = 0; k &lt; m; k++){/*将B数组接在A数组后面存入A数组*/
+<br>		A[k+n] = B[k];
+<br>	}
+<br>	for(i = n; i &lt; n+m; i++){/*在数组A 内部进行插入排序*/
+<br>		t = A[i];
+<br>		for(j = i; j &gt;= 0 &amp;&amp; t &lt; A[j]; j--)
+<br>			A[j+1] = A[j];
+<br>		A[j+1] = t;
+<br>	} 
+<br>}
+<br>	
+<br><br></p>            </div>
+        </div>
+
+
+<!--
+<img style="width:50%;padding:150px;" src="../denote.png"/>
+-->
+
+</code></code></div><code><code>
+
+
+<script src="./2015年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</code></code></body></html>

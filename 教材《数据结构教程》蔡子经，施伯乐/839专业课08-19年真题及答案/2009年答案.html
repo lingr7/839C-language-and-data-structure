@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.malic.xyz/ans839/2009/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./2009年答案_files/foundation.min.css">
+<link rel="stylesheet" href="./2009年答案_files/ansv3.css">
+<script src="./2009年答案_files/cmt.js"></script>
+<script src="./2009年答案_files/jquery.min.js"></script>
+<script src="./2009年答案_files/foundation.min.js"></script><style></style>
+<script src="./2009年答案_files/modernizr.js"></script>
+<link rel="stylesheet" href="./2009年答案_files/font-awesome.css">
+
+<title>2009年答案</title>
+
+<meta class="foundation-mq-topbar"></head>
+<body class="vsc-initialized">
+
+<div id="floatNavi">
+<a href="http://www.malic.xyz/ans839/2009/#top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+
+<a href="http://www.malic.xyz/ans839/2009/#comments" onclick="showCMT()"><i class="fa fa-comments fa-2x"></i></a>        
+    </div>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://www.malic.xyz/ans839/2009/#">华东师大839答案</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="http://www.malic.xyz/ans839/2009/#"><span>menu</span></a></li>
+  </ul>
+  
+<section class="top-bar-section">
+    <ul class="left">
+      <li><a href="http://www.malic.xyz/ans839/">起始页</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2018/">2018</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2017/">2017</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2016/">2016</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2015/">2015</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2014/">2014</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2013/">2013</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2012/">2012</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2011/">2011</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2010/">2010</a></li>
+          <li class="active"><a href="http://www.malic.xyz/ans839/2009/">2009</a></li>
+          <li><a href="http://www.malic.xyz/ans839/2008/">2008</a></li>
+    </ul>
+    <ul class="right">
+<li><a href="http://www.malic.xyz/ans839/pageview.html" target="_blank">近日访问量数据</a></li>
+</ul>
+  </section></nav>
+   <div id="contents">
+
+<a id="pc01"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(215, 231, 231);">
+        <p>
+一、回答问题<br>
+1.在标准库的头文件中stdio.h中#ifndef/#define/#endif起什么作用<br>
+2.在标准库的头文件string.h中strcpy的函数原型为:<br>
+char* strcpy(char *,const char *)<br>
+其中的关键字const的意义是什么<br>
+        </p>
+        </div>
+    <p>
+#ifndef,#define,#endif 为头文件保护作用，防止头文件在被多个c文件include时被多次包含<br>
+const表示不能通修改指针所指对象的值<br>
+    </p>
+</div>
+
+<a id="pc02"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(215, 255, 223);">
+        <p>
+二、读程序并写出程序运行结果
+        </p>
+        </div>
+    <p>
+
+BASIC FORTRAN C C++ JAVA C# PERL PASCAL<br>
+FORTRAN PASCAL BASIC JAVA PERL C++ C# C <br>
+BASIC C C# C++ FORTRAN JAVA PASCAL PERL<br>
+    </p>
+</div>
+
+<a id="pc03"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(231, 247, 207);">
+        <p>
+三、写函数定义
+1.用递归定义一个不用数组就将十进制自然数以二进制输出的函数natural2binary.<br>
+2.定义一个函数计算两个矩阵的和，函数原型:<br>
+void matrixAdd(int **a,int **b,int **c,int row,int col);<br>
+三个矩阵a,b,c均有row行和col列，函数将矩阵a与矩阵b的和放在矩阵c中<br>
+        </p>
+        </div>
+    <pre class="codes">void natural2binary(int x)
+{
+    if (x/2)
+        natural2binary(x/2);
+    printf("%d", x% 2);
+    
+}
+<div style="background-color:#F7F;width: 100%;height: 2px;overflow: hidden; ">
+</div>
+
+void matrixAdd(int **a, int **b, int **c, int row, int col)
+{
+    int i,j;
+    for (i=0;i&lt;row;i++)
+    {
+        for (j=0;j&lt;col;j++)
+        {
+            *((int*)c+i*col+j)=*((int*)a+i*col+j)+*((int*)b+i*col+j);
+        }
+    }
+}
+
+    </pre>
+</div>
+
+<a id="pc04"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(199, 223, 255);">
+        <p>
+四、按要求写程序<br>
+1.按相应格式输出文件的每个字节的值<br>
+2.检查判断题<br>
+        </p>
+        </div>
+<p>(1)<br>
+从文件中读入16个字符，或不足16个读到EOF，存在数组unsigned char msg[]当中，保存读取本行的长度为N，在N=16时说明此行未读完，下一行可能还有。每行里先输出第一栏偏移量bias,再输出N个读出字符的十六进制数，再输出对应字符值。若此行不到16个字符，则输出第2栏后要输出(16-N)*3个空格进行第三栏的对齐，并且输出第三栏之后退出循环，不再读入字符。则结束程序。
+</p>
+    <pre> #include &lt;stdio.h&gt;
+ 
+ int main(void)
+ {
+     int i,N,bias=0;
+     unsigned char msg[16];
+     FILE *fp=fopen("dataIN","r");
+     while(1)
+     {
+         for(i=0;i&lt;16;i++)
+         {
+             if(fscanf(fp,"%c",&amp;msg[i])==EOF)
+                 break;
+         }
+         N=i;
+ 
+         printf("%08x ",bias);
+         bias+=0x10;
+         for(i=0;i&lt;N;i++)
+             printf("%02x ",msg[i]);
+         if(N&lt;16)
+             for(i=0;i&lt;6-N;i++)
+                 printf("   ");
+         for(i=0;i&lt;N;i++)
+         {
+             if(0x20&lt;=msg[i] &amp;&amp; msg[i]&lt;=126)
+                 printf("%c",msg[i]);
+             else
+                 printf(".");
+         }
+         printf("\n");
+         if(N&lt;16)
+ 
+             break;
+ 
+     }
+     return 0;
+ }
+                                                                                                          
+                
+ </pre>
+<div style="background-color:#F8F;width:100%;height:2px;margin:0 auto;padding:0px;overflow:hidden;">
+  </div> 
+<p>(2)</p>
+<pre class="codes">#include &lt;stdio.h&gt;
+
+int checkBits(int Res,int Ans)
+{
+    int i,z=0;
+    for(i=0;i&lt;10;i++)
+    {
+        if( (Res&amp;1) == (Ans&amp;1) )
+            z++;
+        Ans=Ans&gt;&gt;1;
+        Res=Res&gt;&gt;1;
+    }
+    return z;
+}
+
+void showAns(int Res)
+{
+    int i;
+    for(i=1;i&lt;=10;i++)
+        printf("%3d",i);
+    printf("\n");
+
+    for(i=0;i&lt;10;i++)
+    {
+        printf("  ");
+        if((Res&amp;1)==1)
+            printf("T");
+        else
+            printf("F");    
+        Res&gt;&gt;=1;
+    }
+
+}
+
+int main()
+{
+/*                      HEX
+    A: 01 0010 1110 : 0x12E
+    B: 00 1101 1100 : 0x0DC
+    C: 11 0111 0101 : 0x375
+*/
+    const int AAns=0x12E,BAns=0x0DC,CAns=0x375;
+    const int AScore=7,BScore=7,CScore=7;
+    int tryAns;
+    for(tryAns=0x0;tryAns&lt;=0x3FF;tryAns++)
+    {
+        if(checkBits(tryAns,AAns)==AScore
+            &amp;&amp; checkBits(tryAns,BAns)==BScore
+            &amp;&amp; checkBits(tryAns,CAns)==CScore)
+        {
+;
+            showAns(tryAns);
+            printf("\n\n");
+        }
+    }
+
+    return 0;
+}
+
+    </pre>
+</div>
+
+<a id="pc05"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(223, 207, 207);">
+        <p>
+
+一、在表长为5的双向链表中，p所指的结点不是头结点，请写出插入q所指的结点使其成为p所指的结点的直接前驱结点的主要语句
+        </p>
+        </div>
+    <pre>q-&gt;next=p;
+q-&gt;prior=p-&gt;prior;
+p-&gt;prior-&gt;next=q;
+p-&gt;prior=q;
+    </pre>
+</div>
+
+<a id="pc06"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(255, 215, 239);">
+        <p>
+二、设P为长为n的字符串，其中的字符各不相同，请简要分析出P中互不相等的子串的总个数
+        </p>
+        </div>
+    <p>
+长为n的子串有1个，即字符串本身;<br>
+长为n-1的子串有2个，长为n-2的子串有3个...长为n-k的子串有k+1个（k&lt;n）<br>
+非空串的个数为1+2+3+...+n<br>
+长为0的子串是空串，只有1个。<br>
+所以P中互不相等的子串总共有
+<br>
+<img src="./2009年答案_files/gif.latex">
+<br>
+    </p>
+</div>
+
+<a id="pc07"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(199, 231, 223);">
+        <p>
+三、已知a个数存储于一维数组a中，填空完成下面的冒泡排序函数
+        </p>
+        </div>
+    <p>
+(1) -- <br>
+(2) &gt;=<br>
+(3) 0<br>
+(4) &gt;<br>
+(5) i<br>
+(6) n<br>
+    </p>
+</div>
+
+<a id="pc08"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(255, 255, 207);">
+        <p>
+四、已知一个中序穿线树，完成找出此穿线树中t所指结点的按中序遍历的直接后继结点
+        </p>
+        </div>
+    <p>
+(1) == 1 <br>
+(2) rchild<br>
+(3) == 0<br>
+(4) lchild<br>
+    </p>
+</div>
+
+<a id="pc08"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(231, 199, 231);">
+        <p>
+五、
+(1)简要分析有12个结点的平衡查找树T的最大高度是多少<br>
+(2)画出一棵这棵的平衡查找树T<br>
+(3)求出在等概率情况下对T进行成功查找时的平均查找长度<br>
+        </p>
+        </div>
+    <p>
+    (1)<br>
+最大高度为5<br>
+王道书上有这个公式.<br>
+(2)<br>
+结点不多的时候也可以画示意图，尽量往一边（比如靠左）伸长，什么时候不是AVL树就往另一边加结点保证它是AVL树。如下图示。<br>
+<img src="./2009年答案_files/pd5.png" style="width:300px;">
+<br>
+(3)<br>
+(1+2*2+3*4+4*4+5*1)/12=38/12=19/6<br>
+    </p>
+</div>
+
+<a id="pc08"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(223, 199, 207);">
+        <p>
+六、写出用Floyd算法求下图中各对顶点之间最短路径的整个过程
+        </p>
+        </div>
+    <pre><code>
+[0] Distance  | Path
+0   1   -   3 |   -    1~2    -    1~4
+-   0   1   - |   -     -    2~3    -
+5   -   0   2 |  3~1    -     -    3~4
+-   4   -   0 |   -    4~2    -     -
+
+[1] Distance  | Path
+0   1   -   3 |   -    1~2    -    1~4
+-   0   1   - |   -     -    2~3    -
+5   6   0   2 |  3~1  3~1~2   -    3~4
+-   4   -   0 |   -    4~2    -     -
+
+[2] Distance  | Path
+0   1   2   3 |   -    1~2  1~2~3  1~4
+-   0   1   - |   -     -    2~3    -
+5   6   0   2 |  3~1  3~1~2   -    3~4
+-   4   5   0 |   -    4~2  4~2~3   -
+
+[3] Distance  | Path
+0   1   2   3 |   -    1~2  1~2~3  1~4
+6   0   1   3 | 2~3~1   -    2~3  2~3~4
+5   6   0   2 |  3~1  3~1~2   -    3~4
+-   4   5   0 |   -    4~2  4~2~3   -
+
+[4] Distance  | Path
+0   1   2   3 |   -    1~2  1~2~3  1~4
+6   0   1   3 | 2~3~1   -    2~3  2~3~4
+5   6   0   2 |  3~1  3~1~2   -    3~4
+10  4   5   0 |4~2~3~1 4~2  4~2~3     -
+
+   </code> </pre>
+</div>
+
+<a id="pc08"></a><br>
+<div class="subAns">
+        <div class="qtitle" style="background-color: rgb(207, 199, 215);">
+        <p>
+七、已知一棵二叉树T按标准形式存储（指向树根的指针为t），T中各结点值互不相同，T中有值为x和y和z的三个结点，写函数判断值为x的结点是否为值为y和z的结点的共同祖先。
+先写出主要思想然后写函数
+        </p>
+        </div>
+    <p>
+以x为根结点先序遍历x的子树，若遍历结束时，y与z都访问到，则x为y与z的共同祖先
+   </p>
+   <pre class="codes">
+typedef ElementType char;
+int findY = 0, findZ = 0;
+int isAncestor(ElementType x,ElementType y,ElementType z)
+{
+    preOrderTraverse(x, y, z)
+    if (findY==1 &amp;&amp; findZ == 1)
+        return 1;
+    return 0;
+}
+
+void preOrderTraverse(Node *x, Node *y, Node *z)
+{
+    if (y==x)
+        findY=1;
+    if (z==x)
+        findZ=1;
+    if (x-&gt;left!=NULL)
+        preOrderTraverse(x-&gt;left,y,z);
+    if (x-&gt;right!=NULL)
+        preOrderTraverse(x-&gt;right,y,z);
+}
+ </pre>
+</div>
+<a id="comments"></a>
+<br>
+ <div style="background-color:#888;height:1px;width:100%"></div>
+        <p><a href="javascript:void(0);" onclick="showCMT()">讨论区</a></p>
+        <div id="cmtSpace" style="display: none;">
+            <p>昵称(至少4个字符)</p><input type="text" style="width:150px;" id="nickName">
+            <p>评论内容</p><textarea style="height:90px;width:400px;" id="comment"></textarea>
+<br>
+            <button onclick="loadXMLDoc()">提交</button>
+            <div id="cmt">
+            <p>1楼-<b>  cstirling
+</b>:<br>学长你好 关于第七题题目中的xyz都是值，而学长直接用指针xyz代替，并且直接锁定了x的位置，没有从根节点指针t出发先找到值x的节点，这样会不会有失妥当？
+<br></p><p style="font-size:80%;">#<span style="color:#55F;"><b>malic</b></span>:对，已将题目的参数改为ElementType</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>2楼-<b>  一只路过的赛艇
+</b>:<br>快排那里有没有做出来第二排perl在java之前的。。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>3楼-<b>  双非跨考
+</b>:<br>给字符串排序那个，第二行错了
+<br>
+<br>BASIC FORTRAN C C++ JAVA C# PERL PASCAL
+<br>FORTRAN PASCAL BASIC JAVA PERL C++ C# C
+<br>BASIC C C# C++ FORTRAN JAVA PASCAL PERL
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>4楼-<b>  风干橘子皮
+</b>:<br>数据结构冒泡排序，(3)、是&gt;不需要加=号
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>5楼-<b>  无偏sun_
+</b>:<br>你好，请问数据结构第二题不需要加上空串吗？
+<br></p><p class="rep">#<span class="rep">malic</span>:空串也是子串，应当加上，已修正。</p>
+<br><p></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>6楼-<b>  双非跨考
+</b>:<br>第四个题第一个不是读文件吗？怎么成转十进制转十六进制了？？
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>7楼-<b>  双非跨考
+</b>:<br>第四题读文件那个，用fscanf读二进制文件可能会丢失信息，最好用fread
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>8楼-<b>  cccc
+</b>:<br>想问一下学长，DS 第六题，加入顶点3之后，顶点4到顶点1的路径是不是应该是顶点4到定点2再到顶点3再到顶点1，距离为4+1+5=10呢？我看答案上学长写的是无穷
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>9楼-<b>  cccc
+</b>:<br>不好意思学长，已经明白是为什么了，打扰了
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>10楼-<b>  きぼうのはな
+</b>:<br>冒泡排序题(2)&gt; (5)1 (6)n*
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>11楼-<b>  旧庐杜门
+</b>:<br>8楼#cccc说的问题我也遇到了，我认为在中间顶点为3（k==3）的时候，已经是4~3~1，所以是5+5=10.
+<br>编了弗洛伊德算法实际运行后也是如此。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>12楼-<b>  旧庐杜门
+</b>:<br>第三大题第二小问，对指针与整数进行相加运算，这里*a是了矩阵的a的起始第一个数a[0][0]的地址，为进行运算，应该是(int*)(*a)
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>13楼-<b>  旧庐杜门
+</b>:<br>第四题第二问既可以if( (Res&amp;1) == (Ans&amp;1) )判断最右端一位是否相符，也可以使用Res &amp; ~(~0&lt;&lt;1)来取出Res的最右端一位。
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>14楼-<b>  旧庐杜门
+</b>:<br>12楼我的说法错了，（int*）a就是字符数组的首元素地址
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>15楼-<b>  匿名而已
+</b>:<br>C语言第三题第二问，*((int*)c+i*col+j) 传参的时候用数组强转为二级指针的话这样做没问题，但是如果传入的本身就是二级指针的话这样运行会出错
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>16楼-<b>  jhdks
+</b>:<br>第七大题不对吧。。
+<br>
+<br></p><div style="background-color:#CCC;height:1px;width:80%"></div><p>17楼-<b>  ZLZLZL
+</b>:<br>定义一个函数计算两个矩阵的和.这里*((int*)b+i*col+j)。。是否应该乘以sizeof(int) .*((int*)b+i*col*sizeof(int)+j*sizeof(int))
+<br><br></p>            </div>
+        </div>
+<!--
+<img style="width:50%;padding:150px;" src="../denote.png"/>
+-->
+</div>
+<script src="./2009年答案_files/bgcolor.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+
+</body></html>
